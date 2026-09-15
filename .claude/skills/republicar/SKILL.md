@@ -5,48 +5,96 @@ description: Rotina semanal completa - atualiza o catálogo do site, escolhe o l
 
 # Republicar anúncios no Marketplace
 
-Siga as fases na ordem. As "Regras de ouro" do CLAUDE.md valem sempre e prevalecem sobre esta skill.
+Siga as fases na ordem, sem pular. As "Regras de ouro" do CLAUDE.md valem sempre e prevalecem sobre esta skill.
 
-## Fase 0 — Verificações (rápidas e silenciosas)
+**Não faça contas nem edite arquivos de estado de cabeça.** Os scripts abaixo existem para isso; use-os sempre:
 
-1. `curl -s --max-time 3 http://127.0.0.1:12306/ping` deve responder `{"status":"ok"}`. Se falhar: peça ao usuário para abrir o Google Chrome, clicar no ícone da extensão e em "Conectar"; tente de novo; se continuar falhando, encerre explicando.
-2. Abra `https://www.facebook.com/marketplace/you/selling` com `chrome_navigate` e confira com `chrome_read_page` se há uma sessão logada do Facebook (se aparecer tela de login, peça para o usuário entrar na conta e diga que você espera).
+| Para | Comando |
+| --- | --- |
+| Atualizar o catálogo do site | `node scripts/coleta.mjs` |
+| Montar o lote da semana (máx. 10, já ordenado e filtrado) | `node scripts/lote.mjs` |
+| Ficha de um anúncio pronta para o formulário | `node scripts/lote.mjs ficha <id>` |
+| Baixar as fotos de um anúncio | `node scripts/coleta.mjs --fotos <id>` |
+| Ver quais ativos ainda não têm link | `node scripts/lote.mjs links` |
+| Gravar o estado após cada item | `node scripts/estado.mjs <publicado|renovado|link|removido|erro> <id> ...` |
+
+Fale com o usuário em português simples, uma pergunta por vez.
+
+## Fase 0 — Verificações
+
+1. Rode `curl -s --max-time 3 http://127.0.0.1:12306/ping`. Deve responder `{"status":"ok"}`. Se falhar: peça ao usuário para abrir o Google Chrome, clicar no ícone da extensão e em "Conectar"; tente de novo até 3 vezes; se continuar falhando, encerre explicando em uma frase.
+2. Abra `https://www.facebook.com/marketplace/you/selling` com `chrome_navigate` (`newWindow: true`; guarde o `tabId` e passe-o em TODAS as chamadas seguintes). Use `chrome_read_page` para conferir se há uma sessão logada. Se aparecer tela de login, peça para o usuário entrar na conta e diga que você espera; confira de novo depois do "pronto".
 3. Cumprimente o usuário em uma frase e diga que vai conferir o site primeiro.
 
 ## Fase 1 — Catálogo
 
-Execute a skill `atualizar-catalogo` (rode o script e resuma as mudanças).
+1. Rode `node scripts/coleta.mjs`.
+2. Resuma em linguagem simples o que o script imprimiu: total no site, novos, removidos, preços alterados, sem foto.
+3. Para cada anúncio listado como **removido do site** que exista no estado com status `ativo`: rode `node scripts/estado.mjs removido-site <id>`.
+4. Se o script falhar (site fora do ar, sem internet): explique em uma frase, sugira tentar mais tarde e encerre a rodada.
 
-## Fase 2 — Montar o lote da semana
+## Fase 2 — Montar o lote
 
-Cruzando `catalogo/anuncios.json` com `estado/publicados.json`, monte o lote com prioridade:
-
-1. **Remoções** — anúncios `removido-site` ainda ativos no Marketplace (só executa com confirmação individual).
-2. **Renovações** — publicados há 7 dias ou mais (`publicadoEm`/`renovadoEm` mais antigo primeiro).
-3. **Novos** — anúncios do site que nunca foram publicados (mais recentes primeiro; pule os sem foto, avisando).
-
-Corte em **10 itens** no total. Apresente a lista numerada (ação + título + preço) e pergunte: "Posso seguir com essa lista? (sim / não / tirar algum)". Só continue com o "sim".
+1. Rode `node scripts/lote.mjs`. Ele imprime a lista numerada do lote (remoções, depois renovações, depois novos; máximo 10) e o que ficou de fora com o motivo. Não recalcule nada; não inclua itens que ele deixou de fora.
+2. Mostre ao usuário a lista numerada exatamente como o script deu (ação, título, preço) e pergunte: "Posso seguir com essa lista? (sim / não / tirar algum)".
+3. Só continue com o "sim". Se ele pedir para tirar itens, tire e mostre a lista final antes de começar.
+4. Se o lote estiver vazio, vá direto para a Fase 4.
 
 ## Fase 3 — Executar item a item
 
-Antes do primeiro item: para cada anúncio `ativo` no estado com `linkMarketplace: null`, abra o card dele em "Seus classificados" e tente capturar o link do item (`/marketplace/item/<id>`), salvando no estado (se ainda estiver "em análise", siga em frente).
+### 3.0 Antes do primeiro item: capturar links pendentes
 
-Para cada item, nesta ordem, com pausa de 45–90s entre itens (`sleep 60`):
+Se o `lote.mjs` avisou "Ativos ainda sem link do Marketplace":
 
-**Renovação:** abra direto o `linkMarketplace` salvo no estado (nunca procure só pelo título — há muitos repetidos) e use a opção "Renovar anúncio" (prefira `chrome_computer`). Se o link estiver quebrado, localize em "Seus anúncios" pelo `tituloPublicado` exato E confira o preço antes de agir. Screenshot de confirmação em `estado/logs/AAAA-MM-DD/<id>-renovado.png`; atualize `renovadoEm` e o `historico` no estado.
+1. Rode `node scripts/lote.mjs links` para ver título exato e preço de cada um.
+2. Com a aba em `https://www.facebook.com/marketplace/you/selling`, rode com `chrome_javascript`:
+   ```js
+   return [...document.querySelectorAll('a[href*="/marketplace/item/"]')]
+     .map(a => ({ caminho: new URL(a.href).pathname, texto: a.innerText.replace(/\s+/g, ' ').slice(0, 120) }))
+     .slice(0, 60);
+   ```
+3. Para cada pendente cujo `texto` contenha o `tituloPublicado` exato E o preço, rode `node scripts/estado.mjs link <id> https://www.facebook.com<caminho>`.
+4. Se não encontrar (ainda "em análise"), siga em frente sem gravar nada.
 
-**Criação** (siga passo a passo o fluxo validado em "Montando o anúncio" do CLAUDE.md):
-1. Baixe as fotos: `node scripts/coleta.mjs --fotos <id>`.
-2. Abra `facebook.com/marketplace/create/rental`, selecione "À venda"/"Aluguel" e o tipo; se o `tipo` do catálogo não for residencial (lote, terra, galpão, comercial), pule e anote para o resumo.
-3. Preencha os campos e suba as fotos com `chrome_upload_file` (caminhos absolutos de `catalogo/fotos/<id>/`, uma chamada por foto).
-4. Localização: preencha a cidade e **peça ao usuário para clicar na primeira sugestão** ("clique na primeira opção da lista, por favor") — é o único clique humano do fluxo; aguarde e confira se o "Avançar" habilitou.
-5. Confira o preview com screenshot; "Avançar" → página de audiência: aplique os grupos conforme `estado/grupos.json` (na primeira publicação, apresente a lista e pergunte a escolha — ver passo 8 de "Montando o anúncio" no CLAUDE.md) → "Publicar" → feche o modal "Turbinar".
-6. Screenshot em `estado/logs/AAAA-MM-DD/<id>-publicado.png`; registre no estado (`publicadoEm`, `tituloPublicado` gerado pelo Facebook, histórico). O link do item ainda não existe ("em análise") — deixe `linkMarketplace: null` e capture na próxima rodada.
+### 3.1 Entre um item e outro
 
-**Remoção (confirmada):** abra o `linkMarketplace` do estado (mesma regra da renovação: nunca só pelo título; confira título exato E preço antes de excluir — exclusão é irreversível), exclua, screenshot, marque `status: "removido"` no estado.
+Rode `sleep 60` no Bash antes de começar cada item a partir do segundo. Nunca encurte.
 
-Se um item falhar duas vezes, marque `status: "erro"` com o motivo no histórico, avise em uma frase e **siga para o próximo** — não trave a rodada. Atualize o estado após CADA item.
+### 3.2 Renovação
+
+1. Abra o `linkMarketplace` gravado no estado (está na saída do `lote.mjs`). **Nunca** localize só pelo título: há muitos títulos repetidos.
+2. Procure o botão "Renovar" / "Renovar anúncio" com `chrome_click_element` e XPath, por exemplo `//*[@role="button"][contains(., "Renovar")]`. Se não estiver na página do item, volte a `/marketplace/you/selling` e procure o botão dentro do card cujo link contém o mesmo número do item.
+3. Se em 3 tentativas não encontrar, use `chrome_request_element_selection` e peça: "clique no botão Renovar deste anúncio, por favor" (expira em ~120 s).
+4. Se o Facebook não oferecer renovação, não recrie: rode `node scripts/estado.mjs erro <id> --motivo "sem opção de renovar"` e avise no resumo.
+5. Confirme com `chrome_screenshot` (`storeBase64: true`) e salve o PNG em `estado/logs/AAAA-MM-DD/<id>-renovado.png`.
+6. Rode `node scripts/estado.mjs renovado <id>`.
+
+### 3.3 Criação (anúncio novo)
+
+1. Rode `node scripts/coleta.mjs --fotos <id>` e depois `node scripts/lote.mjs ficha <id>`. A ficha traz todos os valores do formulário já mapeados e os caminhos absolutos das fotos em ordem. Se algum campo da ficha disser "NÃO PUBLICAR", pule o item, rode `node scripts/estado.mjs erro <id> --motivo "<o que a ficha disse>"` e siga.
+2. Abra `https://www.facebook.com/marketplace/create/rental`.
+3. Combobox "Imóvel residencial para venda ou locação": clique nela e depois na opção da ficha (`//*[@role="option"][contains(., "À venda")]`). Combobox "Tipo de imóvel": idem com o valor "Tipo de imóvel" da ficha.
+4. Preencha com `chrome_fill_or_select`, localizando cada input pelo rótulo: Número de quartos, Número de banheiros, Preço (só dígitos), Descrição do imóvel (textarea), e Metros quadrados se a ficha tiver valor. Não invente dados: campo "deixe em branco" fica em branco.
+5. Fotos: uma chamada de `chrome_upload_file` por caminho de `caminhosAbsolutosEmOrdem`, no seletor `input[type="file"][accept*="image"]`. As chamadas acumulam. Se o formulário indicar limite menor, envie só as primeiras.
+6. Localização: preencha o campo com a cidade da ficha e diga ao usuário: "Apareceu uma lista de cidades. Clique na primeira opção, por favor, e me diga 'pronto'." Espere. Depois confira se o botão "Avançar" ficou habilitado; se não, peça o clique de novo.
+7. Tire um `chrome_screenshot` do preview e confira preço e fotos. Clique em "Avançar".
+8. Página de audiência: leia a lista de grupos exibida e siga o passo 8 de "Montando o anúncio" do CLAUDE.md (sincronizar `estado/grupos.json`; na primeira vez, perguntar ao usuário quais usar; marcar os que têm `usar: true`). Nunca marque grupos fora da escolha.
+9. Clique em "Publicar". No modal "Turbine seu classificado", clique em "Fechar". **Nunca** clique em "Turbinar".
+10. Leia o título que o Facebook gerou (ex.: "2 quartos 1 banheiro Apartamento") com `chrome_read_page` ou screenshot. Salve o PNG em `estado/logs/AAAA-MM-DD/<id>-publicado.png`.
+11. Rode `node scripts/estado.mjs publicado <id> --titulo "<título exato gerado>" --grupos "<nomes dos grupos marcados, separados por ;>"`. O link fica nulo de propósito: o anúncio nasce "em análise" e o link é capturado na próxima rodada (3.0).
+
+### 3.4 Remoção
+
+1. Pergunte ao usuário, para ESTE item: "Posso excluir do Marketplace o anúncio '<título>' de R$ <preço>? (sim / não)". Sem "sim", pule.
+2. Abra o `linkMarketplace` do estado. Sem link válido, não exclua: rode `node scripts/estado.mjs erro <id> --motivo "sem link para localizar com segurança"` e avise.
+3. Confira título exato E preço na página antes de excluir. Exclua pelo menu do anúncio (`chrome_click_element` por XPath; se não achar em 3 tentativas, `chrome_request_element_selection`).
+4. Screenshot em `estado/logs/AAAA-MM-DD/<id>-removido.png` e rode `node scripts/estado.mjs removido <id>`.
+
+### 3.5 Falhas e avisos
+
+- Se um item falhar duas vezes: `node scripts/estado.mjs erro <id> --motivo "<motivo curto>"`, avise em uma frase e **siga para o próximo**. Não trave a rodada.
+- Se o Facebook mostrar aviso, verificação, bloqueio ou captcha: tire screenshot, salve em `estado/logs/`, avise o usuário para resolver manualmente e **encerre a rodada** (Fase 4). Nunca tente contornar.
 
 ## Fase 4 — Resumo final
 
-Informe em poucas linhas: quantos publicados (e em quais grupos), renovados, removidos, com erro; quantos ficaram para a próxima rodada; grupos novos detectados no Facebook (se houver, lembre que dá para ligá-los com "configurar grupos"); e qualquer pendência que dependa do usuário. Termine desejando uma boa semana.
+Informe em poucas linhas: quantos publicados (e em quais grupos), renovados, removidos, com erro; quantos ficaram para a próxima rodada (o `lote.mjs` já disse); os anúncios que não cabem no formulário (tipo não aceito e tipo misto, para o Estêvão decidir); grupos novos detectados no Facebook (lembre que dá para ligá-los com "configurar grupos"); e qualquer pendência que dependa do usuário. Termine desejando uma boa semana.

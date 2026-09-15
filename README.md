@@ -9,7 +9,9 @@ Guia do usuário final: [LEIA-ME.md](LEIA-ME.md). Regras de operação da sessã
 | Peça | Papel |
 | --- | --- |
 | `scripts/coleta.mjs` | Coleta via WP REST API (`/wp-json/wp/v2/property`, metadados em `cmb2`); catálogo + diff + download de fotos em alta (remove sufixo `-WxH`) |
-| `.claude/skills/republicar` | Rotina semanal completa (o atalho dispara `claude "/republicar"`) |
+| `scripts/lote.mjs` | Lote da semana determinístico (prioridade, 7 dias, tipos aceitos, limite 10) + `ficha <id>` com campos do formulário e caminhos das fotos + `links` pendentes. Grava `estado/lote-atual.json` |
+| `scripts/estado.mjs` | Única forma de gravar `estado/publicados.json` (publicado/renovado/link/removido-site/removido/erro/mostrar) |
+| `.claude/skills/republicar` | Rotina semanal completa (o atalho dispara `claude "/republicar"`); roteiro explícito pensado para rodar também no Sonnet |
 | `.claude/skills/atualizar-catalogo` | Só coleta + resumo de mudanças |
 | `.claude/skills/configurar-grupos` | Liga/desliga grupos do Facebook onde publicar (escolha salva em `estado/grupos.json`, capturada na 1ª publicação) |
 | `.mcp.json` | chrome-mcp direto via HTTP (`http://127.0.0.1:12306/mcp`) |
@@ -32,6 +34,6 @@ Repositório público: https://github.com/EstevaoTerci/republicador-anuncios-imo
 ## Cuidados conhecidos
 
 - **`npm update -g` na máquina do operador destrói o patch do bridge** (multi-sessão) — sintoma: tools `mcp__chrome-mcp__*` somem da sessão.
-- Facebook (React) rejeita cliques sintéticos (`event.isTrusted`) — a sessão usa `chrome_computer`/`chrome_keyboard`; ver CLAUDE.md.
+- Facebook (React) rejeita cliques sintéticos só no autocomplete de localização (`event.isTrusted`) — ali o usuário clica. No resto, `chrome_click_element` com XPath + `tabId` funciona; `chrome_computer` é proibido (age na janela em foco do usuário). Ver CLAUDE.md.
 - `.ps1` sem acentos de propósito (PowerShell 5.1 + UTF-8 sem BOM = parser em CP-1252).
 - O endpoint `statuses` do WP colide com o core; venda/aluguel vem de `cmb2.property_general.property_contract` (`SALE`/`RENT`).

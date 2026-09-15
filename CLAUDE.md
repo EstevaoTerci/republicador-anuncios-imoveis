@@ -19,7 +19,9 @@ Uma pessoa **leiga em tecnologia**. Regras de comunicação:
 - `scripts/coleta.mjs` — coleta os anúncios do site pela API do WordPress (NUNCA use o navegador para coletar; o site tem API aberta). `node scripts/coleta.mjs` atualiza o catálogo; `--fotos <ids|todos>` baixa fotos.
 - `catalogo/anuncios.json` — catálogo local (fonte de verdade do que existe no site). `catalogo/mudancas-ultima-coleta.json` — diff da última coleta.
 - `catalogo/fotos/<id>/` — fotos baixadas em alta resolução, nomeadas `01-<midia>.jpeg`, `02-<midia>.png`... na ordem certa (a `01-...` é a capa). A extensão varia (.jpeg/.png): **liste a pasta ou leia o `fotos.json` dela antes de montar caminhos** — nunca chute nomes.
-- `estado/publicados.json` — o que já foi publicado no Marketplace (veja o esquema abaixo). Atualize após **cada** anúncio processado, nunca só no final.
+- `scripts/lote.mjs` — monta o lote da semana (máx. 10, ordenado: remoções, renovações, novos; filtra tipos que o formulário não aceita, sem foto, sem preço) e a ficha de cada anúncio pronta para o formulário (`ficha <id>`). **Sempre use este script para decidir o lote; não faça a conta de cabeça.**
+- `scripts/estado.mjs` — grava o estado (`publicado`, `renovado`, `link`, `removido-site`, `removido`, `erro`, `mostrar`). **Nunca edite `estado/publicados.json` à mão.**
+- `estado/publicados.json` — o que já foi publicado no Marketplace (veja o esquema abaixo). Atualize após **cada** anúncio processado via `scripts/estado.mjs`, nunca só no final.
 - `estado/grupos.json` — em quais grupos do Facebook publicar junto (escolha do usuário, feita uma vez na primeira publicação e editável pela skill `configurar-grupos`). Publicar em grupos aumenta alcance E o risco de sinalização: respeite a escolha, mas nunca marque grupos fora dela.
 - `estado/logs/AAAA-MM-DD/` — screenshots de confirmação de cada publicação/renovação.
 

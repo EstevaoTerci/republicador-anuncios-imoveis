@@ -8,3 +8,5 @@ entrega/*.zip
 .vscode/
 .claude/settings.local.json
 node_modules/
+# Lote calculado a cada rodada (derivado)
+estado/lote-atual.json

@@ -10,5 +10,5 @@ description: Atualiza o catálogo local com os anúncios do site marcosperesimov
    - total de anúncios ativos no site;
    - novos (título e preço), removidos, preços alterados;
    - anúncios sem nenhuma foto (avisar que não dá para publicar sem foto).
-3. Se algum anúncio foi **removido do site** e consta como `ativo` em `estado/publicados.json`, marque-o como `removido-site` no estado e avise que ele deve sair do Marketplace na próxima republicação (a remoção em si só acontece com confirmação do usuário).
+3. Se algum anúncio foi **removido do site** e consta como `ativo` em `estado/publicados.json`, rode `node scripts/estado.mjs removido-site <id>` (nunca edite o arquivo à mão) e avise que ele deve sair do Marketplace na próxima republicação (a remoção em si só acontece com confirmação do usuário).
 4. Não use o navegador nesta skill. Se o script falhar (site fora do ar, sem internet), explique em uma frase e sugira tentar mais tarde.
