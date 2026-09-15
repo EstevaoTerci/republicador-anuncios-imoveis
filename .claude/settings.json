@@ -1,0 +1,17 @@
+{
+  "enableAllProjectMcpServers": true,
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "allow": [
+      "mcp__chrome-mcp",
+      "Bash(node:*)",
+      "Bash(curl:*)",
+      "Bash(sleep:*)",
+      "Bash(mkdir:*)",
+      "Bash(ls:*)",
+      "Bash(cp:*)",
+      "Bash(mv:*)",
+      "WebFetch(domain:marcosperesimoveis.com.br)"
+    ]
+  }
+}

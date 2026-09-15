@@ -1,0 +1,10 @@
+# Fotos em alta: o script de coleta baixa de novo (node scripts/coleta.mjs --fotos todos)
+catalogo/fotos/
+# Screenshots de confirmacao de cada rodada (podem conter dados da conta do Facebook)
+estado/logs/
+# Pacote zip antigo de entrega
+entrega/*.zip
+# Ajustes locais do editor / permissoes locais do Claude
+.vscode/
+.claude/settings.local.json
+node_modules/
