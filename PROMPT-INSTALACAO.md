@@ -10,6 +10,10 @@ Escrito para o Claude do operador rodando no plano básico (modelo Sonnet): coma
    ```powershell
    irm https://claude.ai/install.ps1 | iex
    ```
+   Se o instalador avisar `is not in your PATH` (aconteceu na máquina do Ruy), colar também esta linha:
+   ```powershell
+   [Environment]::SetEnvironmentVariable('Path', [Environment]::GetEnvironmentVariable('Path','User') + ';' + "$env:USERPROFILE.localin", 'User')
+   ```
    Fechar o Terminal, abrir de novo e digitar `claude`. Fazer o login no navegador quando ele pedir.
 4. Com o `claude` aberto no Terminal, **colar o prompt abaixo inteiro** e apertar Enter. Quando o Claude pedir permissão para rodar algo, responder "sim" (ou escolher a opção de permitir).
 
