@@ -71,17 +71,35 @@ Rode `sleep 60` no Bash antes de começar cada item a partir do segundo. Nunca e
 
 ### 3.3 Criação (anúncio novo)
 
+Regra geral desta etapa: **preencha um campo, confira, só então vá ao próximo.** Nunca avance com um campo errado achando que corrige depois. Para conferir, use sempre este trecho com `chrome_javascript` (chame-o de "conferência"):
+
+```js
+const campos = {};
+for (const l of document.querySelectorAll('label')) {
+  const inp = l.querySelector('input, textarea');
+  if (inp) campos[l.innerText.replace(/\s+/g, ' ').trim().slice(0, 40)] = inp.value;
+}
+const combos = [...document.querySelectorAll('[role="combobox"]')].map(c => c.innerText.replace(/\s+/g, ' ').trim().slice(0, 60));
+const fotos = document.querySelectorAll('img[src^="blob:"]').length;
+return { combos, campos, fotos };
+```
+
 1. Rode `node scripts/coleta.mjs --fotos <id>` e depois `node scripts/lote.mjs ficha <id>`. A ficha traz todos os valores do formulário já mapeados e os caminhos absolutos das fotos em ordem. Se algum campo da ficha disser "NÃO PUBLICAR", pule o item, rode `node scripts/estado.mjs erro <id> --motivo "<o que a ficha disse>"` e siga. Se a ficha trouxer `avisoTipo`, siga-o: o tipo do formulário é o que a ficha manda, mesmo que o título do site diga lote, terra ou galpão, e a descrição já vem com o título real no início.
 2. Abra `https://www.facebook.com/marketplace/create/rental`.
-3. Combobox "Imóvel residencial para venda ou locação": clique nela e depois na opção da ficha (`//*[@role="option"][contains(., "À venda")]`). Combobox "Tipo de imóvel": idem com o valor "Tipo de imóvel" da ficha.
-4. Preencha com `chrome_fill_or_select`, localizando cada input pelo rótulo: Número de quartos, Número de banheiros, Preço (só dígitos), Descrição do imóvel (textarea), e Metros quadrados se a ficha tiver valor. Não invente dados: campo "deixe em branco" fica em branco.
-5. Fotos: uma chamada de `chrome_upload_file` por caminho de `caminhosAbsolutosEmOrdem`, no seletor `input[type="file"][accept*="image"]`. As chamadas acumulam. Se o formulário indicar limite menor, envie só as primeiras.
-6. Localização: preencha o campo com a cidade da ficha e diga ao usuário: "Apareceu uma lista de cidades. Clique na primeira opção, por favor, e me diga 'pronto'." Espere. Depois confira se o botão "Avançar" ficou habilitado; se não, peça o clique de novo.
-7. Tire um `chrome_screenshot` do preview e confira preço e fotos. Clique em "Avançar".
-8. Página de audiência: leia a lista de grupos exibida e siga o passo 8 de "Montando o anúncio" do CLAUDE.md (sincronizar `estado/grupos.json`; na primeira vez, perguntar ao usuário quais usar; marcar os que têm `usar: true`). Nunca marque grupos fora da escolha.
-9. Clique em "Publicar". No modal "Turbine seu classificado", clique em "Fechar". **Nunca** clique em "Turbinar".
-10. Leia o título que o Facebook gerou (ex.: "2 quartos 1 banheiro Apartamento") com `chrome_read_page` ou screenshot. Salve o PNG em `estado/logs/AAAA-MM-DD/<id>-publicado.png`.
-11. Rode `node scripts/estado.mjs publicado <id> --titulo "<título exato gerado>" --grupos "<nomes dos grupos marcados, separados por ;>"`. O link fica nulo de propósito: o anúncio nasce "em análise" e o link é capturado na próxima rodada (3.0).
+3. **Venda ou aluguel (primeiro de tudo).** Clique na combobox "Imóvel residencial para venda ou locação" e depois na opção da ficha: `//*[@role="option"][contains(., "À venda")]` (ou "Aluguel"). Rode a conferência: em `combos` deve aparecer "À venda". Se não aparecer, repita até 3 vezes; se continuar, peça ao usuário: "clique em 'À venda' na primeira caixa, por favor". **Não preencha mais nada enquanto isso não estiver certo**: o padrão do Facebook é aluguel e o preço sairia como "R$ .../mês".
+4. **Tipo de imóvel.** Mesmo procedimento com a combobox "Tipo de imóvel" e o valor da ficha. Confira em `combos`.
+5. **Quartos e banheiros.** Preencha com `chrome_fill_or_select` os inputs dentro dos rótulos "Número de quartos" e "Número de banheiros" (só o número). Rode a conferência: `campos` deve mostrar os dois valores. Sem eles o Facebook gera o título só como "Casa"/"Apartamento" e o anúncio fica incompleto. Se a ficha diz "deixe em branco" e o formulário exigir, coloque 0.
+6. **Preço.** Preencha só os dígitos da ficha. Confira em `campos`.
+7. **Descrição.** Preencha a textarea "Descrição do imóvel" com o texto da ficha. Confira que `campos` mostra o início do texto. Metros quadrados só se a ficha tiver valor.
+8. **Fotos, em UMA única chamada.** Rode a conferência e anote `fotos` (deve ser 0). Faça **uma só** chamada de `chrome_upload_file` no seletor `input[type="file"][accept*="image"]` com `multiple: true` e TODOS os caminhos de `caminhosAbsolutosEmOrdem`. Espere (`sleep 10`) e rode a conferência: `fotos` deve ser igual ao total da ficha. Se for **menor**, envie só as que faltam (compare pelos nomes) em uma nova chamada. Se for **maior** (duplicou), não envie mais nada: clique no "x" das repetidas até o número bater; se não conseguir, feche a aba sem salvar, registre no caderno de aprendizados e recomece este item do passo 2. **Nunca** chame o upload de novo "para garantir".
+9. **Localização.** Preencha o campo com a cidade da ficha e diga ao usuário: "Apareceu uma lista de cidades. Clique na primeira opção, por favor, e me diga 'pronto'." Espere. Depois confira se o botão "Avançar" ficou habilitado; se não, peça o clique de novo.
+10. **Checklist do preview (obrigatório antes de Avançar).** Tire `chrome_screenshot` (`storeBase64: true`) e confira no painel "Prévia": o título tem o formato "N quartos M banheiros Tipo"; o preço NÃO termina em "/mês" quando é venda; a quantidade de fotos na faixa inferior bate com a ficha; a cidade está certa. Qualquer item errado: volte ao passo correspondente e corrija. Só clique em "Avançar" com tudo certo.
+11. Página de audiência: leia a lista de grupos exibida e siga o passo 8 de "Montando o anúncio" do CLAUDE.md (sincronizar `estado/grupos.json`; na primeira vez, perguntar ao usuário quais usar; marcar os que têm `usar: true`). Nunca marque grupos fora da escolha.
+12. Clique em "Publicar". No modal "Turbine seu classificado", clique em "Fechar". **Nunca** clique em "Turbinar".
+13. Leia o título que o Facebook gerou (ex.: "2 quartos 1 banheiro Apartamento") com `chrome_read_page` ou screenshot. Salve o PNG em `estado/logs/AAAA-MM-DD/<id>-publicado.png`.
+14. Rode `node scripts/estado.mjs publicado <id> --titulo "<título exato gerado>" --grupos "<nomes dos grupos marcados, separados por ;>"`. O link fica nulo de propósito: o anúncio nasce "em análise" e o link é capturado na próxima rodada (3.0).
+
+**Screenshots:** para VER a tela use sempre `chrome_screenshot` com `storeBase64: true`. Não use a ferramenta Read em arquivos da pasta Downloads nem de fora do projeto. Para guardar a confirmação em `estado/logs/`, mova com `mv` no Bash o arquivo que o navegador salvou.
 
 ### 3.4 Remoção
 
