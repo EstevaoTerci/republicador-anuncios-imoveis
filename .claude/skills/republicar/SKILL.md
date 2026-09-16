@@ -71,7 +71,7 @@ Rode `sleep 60` no Bash antes de começar cada item a partir do segundo. Nunca e
 
 ### 3.3 Criação (anúncio novo)
 
-1. Rode `node scripts/coleta.mjs --fotos <id>` e depois `node scripts/lote.mjs ficha <id>`. A ficha traz todos os valores do formulário já mapeados e os caminhos absolutos das fotos em ordem. Se algum campo da ficha disser "NÃO PUBLICAR", pule o item, rode `node scripts/estado.mjs erro <id> --motivo "<o que a ficha disse>"` e siga.
+1. Rode `node scripts/coleta.mjs --fotos <id>` e depois `node scripts/lote.mjs ficha <id>`. A ficha traz todos os valores do formulário já mapeados e os caminhos absolutos das fotos em ordem. Se algum campo da ficha disser "NÃO PUBLICAR", pule o item, rode `node scripts/estado.mjs erro <id> --motivo "<o que a ficha disse>"` e siga. Se a ficha trouxer `avisoTipo`, siga-o: o tipo do formulário é o que a ficha manda, mesmo que o título do site diga lote, terra ou galpão, e a descrição já vem com o título real no início.
 2. Abra `https://www.facebook.com/marketplace/create/rental`.
 3. Combobox "Imóvel residencial para venda ou locação": clique nela e depois na opção da ficha (`//*[@role="option"][contains(., "À venda")]`). Combobox "Tipo de imóvel": idem com o valor "Tipo de imóvel" da ficha.
 4. Preencha com `chrome_fill_or_select`, localizando cada input pelo rótulo: Número de quartos, Número de banheiros, Preço (só dígitos), Descrição do imóvel (textarea), e Metros quadrados se a ficha tiver valor. Não invente dados: campo "deixe em branco" fica em branco.
@@ -97,4 +97,4 @@ Rode `sleep 60` no Bash antes de começar cada item a partir do segundo. Nunca e
 
 ## Fase 4 — Resumo final
 
-Informe em poucas linhas: quantos publicados (e em quais grupos), renovados, removidos, com erro; quantos ficaram para a próxima rodada (o `lote.mjs` já disse); os anúncios que não cabem no formulário (tipo não aceito e tipo misto, para o Estêvão decidir); grupos novos detectados no Facebook (lembre que dá para ligá-los com "configurar grupos"); e qualquer pendência que dependa do usuário. Termine desejando uma boa semana.
+Informe em poucas linhas: quantos publicados (e em quais grupos), renovados, removidos, com erro; quantos ficaram para a próxima rodada (o `lote.mjs` já disse); quantos foram publicados com tipo adaptado (o `lote.mjs` marca com *) e os que ficaram fora do formulário, se houver; grupos novos detectados no Facebook (lembre que dá para ligá-los com "configurar grupos"); e qualquer pendência que dependa do usuário. Termine desejando uma boa semana.

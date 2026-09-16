@@ -18,6 +18,7 @@ const ARQ_ANUNCIOS = path.join(RAIZ, 'catalogo', 'anuncios.json');
 const ARQ_ESTADO = path.join(RAIZ, 'estado', 'publicados.json');
 const ARQ_LOTE = path.join(RAIZ, 'estado', 'lote-atual.json');
 const DIR_FOTOS = path.join(RAIZ, 'catalogo', 'fotos');
+const ARQ_CONFIG = path.join(RAIZ, 'estado', 'config.json');
 
 const LIMITE_LOTE = 10;
 const DIAS_RENOVACAO = 7;
@@ -42,14 +43,22 @@ function moeda(v) {
   return 'R$ ' + Number(v).toLocaleString('pt-BR');
 }
 
-// Classifica o tipo do catálogo: { formulario: 'Casa' } | { motivo: '...' }
-function classificarTipo(tipo) {
-  if (!tipo) return { motivo: 'sem tipo no site' };
-  const partes = String(tipo).split(',').map((p) => p.trim().toLowerCase()).filter(Boolean);
+// Classifica o tipo do catálogo: { formulario: 'Casa' } | { formulario, forcado: true } | { motivo: '...' }
+// Com estado/config.json { publicarNaoResidencialComo: 'Apartamento' }, tipos fora do formulário
+// (e tipos mistos) entram como esse tipo, marcados como "forcado" para aparecer no lote e na descrição.
+function classificarTipo(tipo, cfg) {
+  const forcarComo = cfg?.publicarNaoResidencialComo || null;
+  const partes = String(tipo || '').split(',').map((p) => p.trim().toLowerCase()).filter(Boolean);
   const residenciais = partes.map((p) => RESIDENCIAL[p]).filter(Boolean);
   const outros = partes.filter((p) => !RESIDENCIAL[p]);
-  if (!residenciais.length) return { motivo: `tipo "${tipo}" não existe no formulário do Facebook` };
-  if (outros.length) return { misto: true, motivo: `tipo misto "${tipo}" — decidir com o Estêvão se cabe como ${residenciais[0]}` };
+  if (!residenciais.length) {
+    if (forcarComo) return { formulario: forcarComo, forcado: true, tipoReal: tipo || 'sem tipo' };
+    return { motivo: tipo ? `tipo "${tipo}" não existe no formulário do Facebook` : 'sem tipo no site' };
+  }
+  if (outros.length) {
+    if (forcarComo) return { formulario: residenciais[0], forcado: true, tipoReal: tipo };
+    return { misto: true, motivo: `tipo misto "${tipo}" — decidir com o Estêvão se cabe como ${residenciais[0]}` };
+  }
   return { formulario: residenciais[0] };
 }
 
@@ -71,6 +80,7 @@ async function montarLote() {
   }
   const anuncios = catalogo.anuncios;
   const estado = await lerJson(ARQ_ESTADO, { anuncios: {} });
+  const cfg = await lerJson(ARQ_CONFIG, {});
   const pub = estado.anuncios || {};
   const noSite = new Map(anuncios.map((a) => [String(a.id), a]));
 
@@ -105,11 +115,11 @@ async function montarLote() {
   for (const a of candidatos) {
     const e = pub[String(a.id)];
     if (e && e.status === 'erro') { fora.erroAnterior.push(a); continue; }
-    const t = classificarTipo(a.tipo);
+    const t = classificarTipo(a.tipo, cfg);
     if (!t.formulario) { (t.misto ? fora.tipoMisto : fora.naoResidencial).push({ ...a, motivo: t.motivo }); continue; }
     if (!a.fotos || !a.fotos.length) { fora.semFoto.push(a); continue; }
     if (a.preco == null) { fora.semPreco.push(a); continue; }
-    novos.push({ id: a.id, titulo: a.titulo, preco: a.preco, acao: 'publicar', tipoFormulario: t.formulario });
+    novos.push({ id: a.id, titulo: a.titulo, preco: a.preco, acao: 'publicar', tipoFormulario: t.formulario, forcado: !!t.forcado, tipoReal: t.tipoReal ?? a.tipo });
   }
 
   const tudo = [...remocoes, ...renovacoes, ...novos];
@@ -120,9 +130,10 @@ async function montarLote() {
   console.log(`LOTE DA SEMANA (${lote.length} de no máximo ${LIMITE_LOTE})`);
   if (!lote.length) console.log('  Nada a fazer nesta rodada.');
   lote.forEach((item, i) => {
-    const extra = item.acao === 'renovar' ? `${item.dias} dias` : item.acao === 'publicar' ? item.tipoFormulario : '';
+    const extra = item.acao === 'renovar' ? `${item.dias} dias` : item.acao === 'publicar' ? (item.forcado ? `${item.tipoFormulario}* — tipo real: ${item.tipoReal}` : item.tipoFormulario) : '';
     console.log(`  ${String(i + 1).padStart(2)}. ${linha(item.acao.toUpperCase(), item, extra)}`);
   });
+  if (lote.some((i) => i.forcado)) console.log(`  * publicado como "${cfg.publicarNaoResidencialComo}" por configuração (estado/config.json); a descrição começa pelo título real do site.`);
   console.log('');
   console.log(`Ficam para a próxima rodada: ${sobraram}`);
   if (semLink.length) console.log(`Ativos ainda sem link do Marketplace (capturar antes do 1º item): ${semLink.join(', ')}`);
@@ -154,7 +165,8 @@ async function ficha(id) {
   const catalogo = await lerJson(ARQ_ANUNCIOS, null);
   const a = catalogo?.anuncios.find((x) => String(x.id) === String(id));
   if (!a) { console.error(`Anúncio #${id} não está no catálogo.`); process.exit(1); }
-  const t = classificarTipo(a.tipo);
+  const cfg = await lerJson(ARQ_CONFIG, {});
+  const t = classificarTipo(a.tipo, cfg);
   const dirFotos = path.join(DIR_FOTOS, String(a.id));
   const manifesto = await lerJson(path.join(dirFotos, 'fotos.json'), null);
   const fotos = manifesto ? manifesto.fotos.slice(0, LIMITE_FOTOS).map((f) => path.join(dirFotos, f.arquivo)) : [];
@@ -170,8 +182,11 @@ async function ficha(id) {
       'Preço (só dígitos)': a.preco != null ? String(a.preco) : `NÃO PUBLICAR — sem preço (${a.precoTexto ?? 'consulte'})`,
       'Metros quadrados': a.areaConstruida ?? a.areaTerreno ?? '(não informado — deixe em branco)',
       'Localização (cidade a digitar)': a.cidade,
-      'Descrição do imóvel': formatarDescricao(a.descricao),
+      'Descrição do imóvel': (t.forcado ? `${a.titulo}
+
+` : '') + formatarDescricao(a.descricao),
     },
+    avisoTipo: t.forcado ? `Tipo real no site: "${t.tipoReal}". Vai como "${t.formulario}" por configuração. Quartos/banheiros sem valor: deixe em branco; se o formulário exigir, coloque 0.` : null,
     fotos: {
       total: fotos.length,
       aviso: fotos.length ? null : `Fotos ainda não baixadas. Rode: node scripts/coleta.mjs --fotos ${a.id}`,
