@@ -48,6 +48,15 @@ try {
             New-Item -ItemType Directory -Force -Path (Split-Path -Parent $arqVersao) | Out-Null
             Set-Content -Path $arqVersao -Value $remota
             Write-Host '[OK] Programa atualizado.' -ForegroundColor Green
+            $marcaExt = Join-Path $raiz 'estado\extensao-atualizada.txt'
+            if (Test-Path $marcaExt) {
+                Write-Host ''
+                Write-Host 'A extensao do Chrome foi atualizada. Para ela valer, o Chrome precisa ser reaberto:' -ForegroundColor Yellow
+                Write-Host '  1. Feche TODAS as janelas do Google Chrome.' -ForegroundColor Yellow
+                Write-Host '  2. Abra o Chrome de novo e entre no Facebook, se pedir.' -ForegroundColor Yellow
+                Read-Host '  3. Depois disso, volte aqui e pressione ENTER para continuar'
+                Remove-Item $marcaExt -Force
+            }
         } else {
             Write-Host '[AVISO] Nao consegui atualizar agora. Seguindo com a versao atual.' -ForegroundColor Yellow
         }

@@ -1,7 +1,1476 @@
 {
-  "coletadoEm": "2026-07-02T01:52:41.450Z",
-  "total": 82,
+  "coletadoEm": "2026-09-16T00:48:54.042Z",
+  "total": 96,
   "anuncios": [
+    {
+      "id": 9584,
+      "slug": "vende-galpao-3",
+      "link": "https://marcosperesimoveis.com.br/properties/vende-galpao-3/",
+      "titulo": "VENDE GALPÃO",
+      "descricao": "Localizado em Barra de São Francisco, próximo a Vila Paulista, com 10.000m² de terreno e Galpão com  600m²",
+      "preco": 1000000,
+      "precoTexto": null,
+      "negocio": "Venda",
+      "tipo": "Galpão",
+      "cidade": "Barra de São Francisco",
+      "endereco": "Rua Prefeito Manoel Gonçalves - 527",
+      "quartos": null,
+      "banheiros": null,
+      "vagas": null,
+      "areaConstruida": null,
+      "areaTerreno": null,
+      "destaque": true,
+      "fotos": [
+        {
+          "midiaId": 9585,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/WhatsApp-Image-2026-08-26-at-09.08.18-1.jpeg"
+        },
+        {
+          "midiaId": 9586,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/WhatsApp-Image-2026-08-26-at-09.08.18-2.jpeg"
+        },
+        {
+          "midiaId": 9587,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/WhatsApp-Image-2026-08-26-at-09.08.18.jpeg"
+        },
+        {
+          "midiaId": 9588,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/WhatsApp-Image-2026-08-26-at-09.08.19-1.jpeg"
+        },
+        {
+          "midiaId": 9589,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/WhatsApp-Image-2026-08-26-at-09.08.19-2.jpeg"
+        },
+        {
+          "midiaId": 9590,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/WhatsApp-Image-2026-08-26-at-09.08.19.jpeg"
+        }
+      ],
+      "capaMidiaId": 9585,
+      "modificadoEm": "2026-09-02T13:56:00Z"
+    },
+    {
+      "id": 9560,
+      "slug": "vende-terra-9",
+      "link": "https://marcosperesimoveis.com.br/properties/vende-terra-9/",
+      "titulo": "VENDE TERRA",
+      "descricao": "Localizada no Córrego do Boi em Vargem Alegre.\nCom 6 alqueires, toda formada em pasto, possui duas nascentes e um pequeno curral.",
+      "preco": 1100000,
+      "precoTexto": null,
+      "negocio": "Venda",
+      "tipo": "Terra",
+      "cidade": "Barra de São Francisco",
+      "endereco": "Rua Prefeito Manoel Gonçalves - 527",
+      "quartos": null,
+      "banheiros": null,
+      "vagas": null,
+      "areaConstruida": null,
+      "areaTerreno": null,
+      "destaque": true,
+      "fotos": [
+        {
+          "midiaId": 9561,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/01-1-scaled.jpg"
+        },
+        {
+          "midiaId": 9562,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/DJI_20260713161111_0084_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9563,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/DJI_20260713161153_0085_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9564,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/DJI_20260713161241_0087_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9565,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/DJI_20260713161311_0089_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9566,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/DJI_20260713161402_0091_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9567,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/DJI_20260713162020_0099_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9568,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/DJI_20260713162224_0104_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9569,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/DJI_20260713162421_0106_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9570,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/DJI_20260713162610_0108_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9571,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/DJI_20260713162658_0111_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9572,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/DJI_20260713162739_0114_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9573,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/DJI_20260713163055_0117_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9574,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/DJI_20260713163257_0120_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9575,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/DJI_20260713163350_0123_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9576,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/DJI_20260713163516_0128_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9577,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/DJI_20260821114151_0131_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9578,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/DJI_20260821114637_0132_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9579,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/DJI_20260821114724_0134_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9580,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/DJI_20260821114953_0137_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9581,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/DJI_20260821115238_0139_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9582,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/DJI_20260821115258_0140_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9583,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/DJI_20260821115435_0142_D-scaled.jpg"
+        }
+      ],
+      "capaMidiaId": 9561,
+      "modificadoEm": "2026-09-02T13:41:22Z"
+    },
+    {
+      "id": 9554,
+      "slug": "vende-2-lotes",
+      "link": "https://marcosperesimoveis.com.br/properties/vende-2-lotes/",
+      "titulo": "VENDE 2 LOTES",
+      "descricao": "Localizados no bairro Alvorada | 1° lote medindo 300m² | 2° lote medindo 509m².\nValor – 1° lote – R$ 200.000\n2° lote – R$ 300.000",
+      "preco": 500000,
+      "precoTexto": null,
+      "negocio": "Venda",
+      "tipo": "Lote",
+      "cidade": "Barra de São Francisco",
+      "endereco": "Rua Prefeito Manoel Gonçalves - 527",
+      "quartos": null,
+      "banheiros": null,
+      "vagas": null,
+      "areaConstruida": null,
+      "areaTerreno": null,
+      "destaque": true,
+      "fotos": [
+        {
+          "midiaId": 9555,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/01-scaled.jpg"
+        },
+        {
+          "midiaId": 9556,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/02-scaled.jpg"
+        },
+        {
+          "midiaId": 9557,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/03-scaled.jpg"
+        },
+        {
+          "midiaId": 9558,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/04-scaled.jpg"
+        },
+        {
+          "midiaId": 9559,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/05-scaled.jpg"
+        }
+      ],
+      "capaMidiaId": 9555,
+      "modificadoEm": "2026-09-02T13:07:10Z"
+    },
+    {
+      "id": 9539,
+      "slug": "vende-casa-12",
+      "link": "https://marcosperesimoveis.com.br/properties/vende-casa-12/",
+      "titulo": "VENDE CASA",
+      "descricao": "Localizado em Mantena – MG, bairro Filadélfia, com 144m² de terreno.\nImóvel conta com – 3 quartos, sala, cozinha, banheiro social, quintal, garagem para moto.",
+      "preco": 230000,
+      "precoTexto": null,
+      "negocio": "Venda",
+      "tipo": "Casa",
+      "cidade": "Mantena",
+      "endereco": "Rua Prefeito Manoel Gonçalves - 527",
+      "quartos": null,
+      "banheiros": null,
+      "vagas": null,
+      "areaConstruida": null,
+      "areaTerreno": null,
+      "destaque": true,
+      "fotos": [
+        {
+          "midiaId": 9540,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/01.jpeg"
+        },
+        {
+          "midiaId": 9541,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/02.jpeg"
+        },
+        {
+          "midiaId": 9542,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/WhatsApp-Image-2026-08-26-at-15.24.42-1.jpeg"
+        },
+        {
+          "midiaId": 9543,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/WhatsApp-Image-2026-08-26-at-15.24.42-2.jpeg"
+        },
+        {
+          "midiaId": 9544,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/WhatsApp-Image-2026-08-26-at-15.24.42-3.jpeg"
+        },
+        {
+          "midiaId": 9545,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/WhatsApp-Image-2026-08-26-at-15.24.42.jpeg"
+        },
+        {
+          "midiaId": 9546,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/WhatsApp-Image-2026-08-26-at-15.24.43-1.jpeg"
+        },
+        {
+          "midiaId": 9547,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/WhatsApp-Image-2026-08-26-at-15.24.43-2.jpeg"
+        },
+        {
+          "midiaId": 9548,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/WhatsApp-Image-2026-08-26-at-15.24.43-3.jpeg"
+        },
+        {
+          "midiaId": 9549,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/WhatsApp-Image-2026-08-26-at-15.24.43.jpeg"
+        },
+        {
+          "midiaId": 9550,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/WhatsApp-Image-2026-08-26-at-15.24.44-1.jpeg"
+        },
+        {
+          "midiaId": 9551,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/WhatsApp-Image-2026-08-26-at-15.24.44-3.jpeg"
+        },
+        {
+          "midiaId": 9552,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/09/WhatsApp-Image-2026-08-26-at-15.24.44.jpeg"
+        }
+      ],
+      "capaMidiaId": 9553,
+      "modificadoEm": "2026-09-02T12:58:51Z"
+    },
+    {
+      "id": 9496,
+      "slug": "vende-casa-11",
+      "link": "https://marcosperesimoveis.com.br/properties/vende-casa-11/",
+      "titulo": "VENDE CASA",
+      "descricao": "Localizada no Condomínio Vila Rica, saída para Colatina.\nImóvel conta com 264m² de terreno, sala de TV, cozinha, sala de jantar, 3 quartos (1 suíte), escritório, área de serviço, varanda e garagem.\nCondomínio possui área recreativa com piscina exclusivo para moradores, local seguro e tranquilo.",
+      "preco": 700000,
+      "precoTexto": null,
+      "negocio": "Venda",
+      "tipo": "Casa",
+      "cidade": "Barra de São Francisco",
+      "endereco": "Rua Prefeito Manoel Gonçalves - 527",
+      "quartos": null,
+      "banheiros": null,
+      "vagas": null,
+      "areaConstruida": null,
+      "areaTerreno": null,
+      "destaque": true,
+      "fotos": [
+        {
+          "midiaId": 9510,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/01-1-scaled.jpg"
+        },
+        {
+          "midiaId": 9511,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/DJI_20260819172122_0214_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9512,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/DJI_20260819172259_0216_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9513,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/DJI_20260819172436_0217_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9514,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/DJI_20260819172540_0219_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9515,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/DJI_20260819172603_0220_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9516,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/DJI_20260819172932_0221_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9517,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/DJI_20260819173006_0222_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9518,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/DJI_20260819173043_0223_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9519,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/DJI_20260819173111_0224_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9520,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6598-scaled.jpg"
+        },
+        {
+          "midiaId": 9521,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6599-scaled.jpg"
+        },
+        {
+          "midiaId": 9522,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6600-scaled.jpg"
+        },
+        {
+          "midiaId": 9523,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6601-1-scaled.jpg"
+        },
+        {
+          "midiaId": 9525,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6602-1-scaled.jpg"
+        },
+        {
+          "midiaId": 9526,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6604-scaled.jpg"
+        },
+        {
+          "midiaId": 9527,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6606-1-scaled.jpg"
+        },
+        {
+          "midiaId": 9528,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6608-1-scaled.jpg"
+        },
+        {
+          "midiaId": 9530,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6610-scaled.jpg"
+        },
+        {
+          "midiaId": 9531,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6613-1-scaled.jpg"
+        },
+        {
+          "midiaId": 9532,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6616-scaled.jpg"
+        },
+        {
+          "midiaId": 9533,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6618-scaled.jpg"
+        },
+        {
+          "midiaId": 9535,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6619-scaled.jpg"
+        },
+        {
+          "midiaId": 9536,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6620-scaled.jpg"
+        },
+        {
+          "midiaId": 9537,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6621-scaled.jpg"
+        },
+        {
+          "midiaId": 9538,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6624-scaled.jpg"
+        }
+      ],
+      "capaMidiaId": 9510,
+      "modificadoEm": "2026-08-28T17:41:27Z"
+    },
+    {
+      "id": 9490,
+      "slug": "vende-lotes",
+      "link": "https://marcosperesimoveis.com.br/properties/vende-lotes/",
+      "titulo": "VENDE LOTES",
+      "descricao": "Localizados atrás da Antares Tintas, lotes de 400m² e 600m².\nValor – R$ 700,00 o M².",
+      "preco": 700,
+      "precoTexto": null,
+      "negocio": "Venda",
+      "tipo": "Lote",
+      "cidade": "Barra de São Francisco",
+      "endereco": "Rua Prefeito Manoel Gonçalves - 527",
+      "quartos": null,
+      "banheiros": null,
+      "vagas": null,
+      "areaConstruida": null,
+      "areaTerreno": null,
+      "destaque": true,
+      "fotos": [
+        {
+          "midiaId": 9494,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-25-at-17.08.06.jpeg"
+        },
+        {
+          "midiaId": 9491,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-25-at-17.08.07-1.jpeg"
+        },
+        {
+          "midiaId": 9492,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-25-at-17.08.07.jpeg"
+        },
+        {
+          "midiaId": 9493,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-25-at-17.08.06-1.jpeg"
+        }
+      ],
+      "capaMidiaId": 9494,
+      "modificadoEm": "2026-08-25T20:23:11Z"
+    },
+    {
+      "id": 9459,
+      "slug": "vende-sitio",
+      "link": "https://marcosperesimoveis.com.br/properties/vende-sitio/",
+      "titulo": "VENDE SÍTIO",
+      "descricao": "Localizado no Rio Preto, próximo ao asfalto.\nPropriedade conta com 1 alqueire, casa sede mobiliada, 2 casas para meeiro, piscina, área de churrasco, 14.800 pés de café plantados, sendo vendida de Porteira Fechada.",
+      "preco": 2000000,
+      "precoTexto": null,
+      "negocio": "Venda",
+      "tipo": "Sitio",
+      "cidade": "Água Doce do Norte",
+      "endereco": "Rua Prefeito Manoel Gonçalves - 527",
+      "quartos": null,
+      "banheiros": null,
+      "vagas": null,
+      "areaConstruida": null,
+      "areaTerreno": null,
+      "destaque": true,
+      "fotos": [
+        {
+          "midiaId": 9460,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/01-1.jpeg"
+        },
+        {
+          "midiaId": 9461,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-12-at-13.04.21.jpeg"
+        },
+        {
+          "midiaId": 9462,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-12-at-13.04.22-1.jpeg"
+        },
+        {
+          "midiaId": 9463,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-12-at-13.04.22-2.jpeg"
+        },
+        {
+          "midiaId": 9464,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-12-at-13.04.22-3.jpeg"
+        },
+        {
+          "midiaId": 9465,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-12-at-13.04.22.jpeg"
+        },
+        {
+          "midiaId": 9466,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-12-at-13.04.23-1.jpeg"
+        },
+        {
+          "midiaId": 9467,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-12-at-13.04.23-3.jpeg"
+        },
+        {
+          "midiaId": 9468,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-12-at-13.04.23.jpeg"
+        },
+        {
+          "midiaId": 9469,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-12-at-13.04.24-1.jpeg"
+        },
+        {
+          "midiaId": 9470,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-12-at-13.04.24-2.jpeg"
+        },
+        {
+          "midiaId": 9471,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-12-at-13.04.24-3.jpeg"
+        },
+        {
+          "midiaId": 9472,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-12-at-13.04.24.jpeg"
+        },
+        {
+          "midiaId": 9473,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-12-at-13.04.25-1.jpeg"
+        },
+        {
+          "midiaId": 9474,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-12-at-13.04.25-2.jpeg"
+        },
+        {
+          "midiaId": 9475,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-12-at-13.04.25-3.jpeg"
+        },
+        {
+          "midiaId": 9476,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-12-at-13.04.25.jpeg"
+        },
+        {
+          "midiaId": 9477,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-12-at-13.04.26-1.jpeg"
+        },
+        {
+          "midiaId": 9478,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-12-at-13.04.26-2.jpeg"
+        },
+        {
+          "midiaId": 9479,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-12-at-13.04.26-3.jpeg"
+        },
+        {
+          "midiaId": 9480,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-12-at-13.04.26.jpeg"
+        },
+        {
+          "midiaId": 9481,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-12-at-13.04.27-1.jpeg"
+        },
+        {
+          "midiaId": 9482,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-12-at-13.04.27-2.jpeg"
+        },
+        {
+          "midiaId": 9483,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-12-at-13.04.27-3.jpeg"
+        },
+        {
+          "midiaId": 9484,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-12-at-13.04.27.jpeg"
+        },
+        {
+          "midiaId": 9485,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-12-at-13.04.28-1.jpeg"
+        },
+        {
+          "midiaId": 9486,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-12-at-13.04.28-2.jpeg"
+        },
+        {
+          "midiaId": 9487,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-12-at-13.04.28.jpeg"
+        }
+      ],
+      "capaMidiaId": 9495,
+      "modificadoEm": "2026-08-25T20:25:01Z"
+    },
+    {
+      "id": 9450,
+      "slug": "vende-lote-4",
+      "link": "https://marcosperesimoveis.com.br/properties/vende-lote-4/",
+      "titulo": "VENDE LOTE",
+      "descricao": "Localizado no bairro Irmãos Fernandes, próximo ao Posto de Saúde e ao Bar do Sinésio.\nImóvel conta com 250m² de terreno e 126m² de área construída, estrutura para 8 lajes, poço artesiano( sem bomba).",
+      "preco": 350000,
+      "precoTexto": null,
+      "negocio": "Venda",
+      "tipo": "Casa",
+      "cidade": "Barra de São Francisco",
+      "endereco": "Rua Prefeito Manoel Gonçalves - 527",
+      "quartos": null,
+      "banheiros": null,
+      "vagas": null,
+      "areaConstruida": null,
+      "areaTerreno": null,
+      "destaque": true,
+      "fotos": [
+        {
+          "midiaId": 9451,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/DJI_20260821161707_0143_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9452,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/DJI_20260821161756_0144_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9453,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/DJI_20260821161854_0145_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9454,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/DJI_20260821162013_0146_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9455,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/DJI_20260821162039_0147_D-1-scaled.jpg"
+        },
+        {
+          "midiaId": 9456,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/DJI_20260821162226_0148_D-1-scaled.jpg"
+        },
+        {
+          "midiaId": 9457,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/DJI_20260821162236_0149_D-1-scaled.jpg"
+        },
+        {
+          "midiaId": 9458,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/DJI_20260821162318_0150_D-scaled.jpg"
+        }
+      ],
+      "capaMidiaId": 9451,
+      "modificadoEm": "2026-08-25T12:48:58Z"
+    },
+    {
+      "id": 9431,
+      "slug": "vende-casa-2",
+      "link": "https://marcosperesimoveis.com.br/properties/vende-casa-2/",
+      "titulo": "VENDE CASA",
+      "descricao": "Localizada no bairro Vila Landinha, próximo a Igreja Luterana, com 150m² de terreno.\nImóvel conta com : 3 quartos ( 1 suíte e closet ), sala, cozinha, banheiro social, despensa, área de serviço, varanda e garagem ( 1 carro e 2 motos ).",
+      "preco": 265000,
+      "precoTexto": null,
+      "negocio": "Venda",
+      "tipo": "Casa",
+      "cidade": "Barra de São Francisco",
+      "endereco": "Rua Prefeito Manoel Gonçalves - 527",
+      "quartos": 3,
+      "banheiros": 2,
+      "vagas": 1,
+      "areaConstruida": null,
+      "areaTerreno": 150,
+      "destaque": true,
+      "fotos": [
+        {
+          "midiaId": 9432,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/01-scaled.jpg"
+        },
+        {
+          "midiaId": 9433,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/02-scaled.jpg"
+        },
+        {
+          "midiaId": 9434,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6627-scaled.jpg"
+        },
+        {
+          "midiaId": 9435,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6628-scaled.jpg"
+        },
+        {
+          "midiaId": 9436,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6629-scaled.jpg"
+        },
+        {
+          "midiaId": 9437,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6631-scaled.jpg"
+        },
+        {
+          "midiaId": 9438,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6632-scaled.jpg"
+        },
+        {
+          "midiaId": 9439,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6633-scaled.jpg"
+        },
+        {
+          "midiaId": 9440,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6634-scaled.jpg"
+        },
+        {
+          "midiaId": 9441,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6635-scaled.jpg"
+        },
+        {
+          "midiaId": 9442,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6636-scaled.jpg"
+        },
+        {
+          "midiaId": 9443,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6637-scaled.jpg"
+        },
+        {
+          "midiaId": 9444,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6639-scaled.jpg"
+        },
+        {
+          "midiaId": 9445,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6641-scaled.jpg"
+        },
+        {
+          "midiaId": 9446,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6642-scaled.jpg"
+        },
+        {
+          "midiaId": 9447,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6643-scaled.jpg"
+        },
+        {
+          "midiaId": 9448,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6644-scaled.jpg"
+        },
+        {
+          "midiaId": 9449,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6646-scaled.jpg"
+        }
+      ],
+      "capaMidiaId": 9432,
+      "modificadoEm": "2026-08-25T12:02:54Z"
+    },
+    {
+      "id": 9430,
+      "slug": "vende-predio-5",
+      "link": "https://marcosperesimoveis.com.br/properties/vende-predio-5/",
+      "titulo": "VENDE PRÉDIO",
+      "descricao": "Localizado no Loteamento Kikito.\nImóvel conta com dois apartamentos, um por andar.",
+      "preco": 700000,
+      "precoTexto": null,
+      "negocio": "Venda",
+      "tipo": "Prédio",
+      "cidade": "Barra de São Francisco",
+      "endereco": "Rua Prefeito Manoel Gonçalves - 527",
+      "quartos": null,
+      "banheiros": null,
+      "vagas": null,
+      "areaConstruida": null,
+      "areaTerreno": null,
+      "destaque": true,
+      "fotos": [
+        {
+          "midiaId": 9414,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/DJI_20260427165255_0047_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9415,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/DJI_20260427165316_0048_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9416,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/DJI_20260427165613_0052_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9417,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-04-27-at-13.30.02-1.jpeg"
+        },
+        {
+          "midiaId": 9418,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-04-27-at-13.30.02-2.jpeg"
+        },
+        {
+          "midiaId": 9419,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-04-27-at-13.30.02.jpeg"
+        },
+        {
+          "midiaId": 9420,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-04-27-at-13.30.03-1.jpeg"
+        },
+        {
+          "midiaId": 9421,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-04-27-at-13.30.03-2.jpeg"
+        },
+        {
+          "midiaId": 9422,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-04-27-at-13.30.03-3.jpeg"
+        },
+        {
+          "midiaId": 9423,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-04-27-at-13.30.03-4.jpeg"
+        },
+        {
+          "midiaId": 9424,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-04-27-at-13.30.03.jpeg"
+        },
+        {
+          "midiaId": 9425,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-04-27-at-13.30.04-1.jpeg"
+        },
+        {
+          "midiaId": 9426,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-04-27-at-13.30.04-2.jpeg"
+        },
+        {
+          "midiaId": 9427,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2026-04-27-at-13.30.04.jpeg"
+        }
+      ],
+      "capaMidiaId": 9414,
+      "modificadoEm": "2026-08-18T13:58:24Z"
+    },
+    {
+      "id": 9399,
+      "slug": "aluga-casa",
+      "link": "https://marcosperesimoveis.com.br/properties/aluga-casa/",
+      "titulo": "ALUGA CASA",
+      "descricao": "Localizada próximo a AABB no Passaredo Residencial, local seguro e tranquilo.\nImóvel conta com 2 quartos (ambos suítes), sala, cozinha, varanda e garagem.",
+      "preco": 3000,
+      "precoTexto": null,
+      "negocio": "Aluguel",
+      "tipo": "Casa",
+      "cidade": "Barra de São Francisco",
+      "endereco": "Rua Prefeito Manoel Gonçalves - 527",
+      "quartos": null,
+      "banheiros": null,
+      "vagas": null,
+      "areaConstruida": null,
+      "areaTerreno": null,
+      "destaque": true,
+      "fotos": [
+        {
+          "midiaId": 9400,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/01.jpeg"
+        },
+        {
+          "midiaId": 9401,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/02.jpeg"
+        },
+        {
+          "midiaId": 9402,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2025-11-12-at-15.44.44-1.jpeg"
+        },
+        {
+          "midiaId": 9403,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2025-11-12-at-15.44.44.jpeg"
+        },
+        {
+          "midiaId": 9404,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2025-11-12-at-15.44.45-1.jpeg"
+        },
+        {
+          "midiaId": 9405,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2025-11-12-at-15.44.45-2.jpeg"
+        },
+        {
+          "midiaId": 9406,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2025-11-12-at-15.44.45-3.jpeg"
+        },
+        {
+          "midiaId": 9407,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2025-11-12-at-15.44.45-rotated.jpeg"
+        },
+        {
+          "midiaId": 9408,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2025-11-12-at-15.44.46-1.jpeg"
+        },
+        {
+          "midiaId": 9409,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2025-11-12-at-15.44.46-2.jpeg"
+        },
+        {
+          "midiaId": 9410,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2025-11-12-at-15.44.46.jpeg"
+        },
+        {
+          "midiaId": 9411,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/WhatsApp-Image-2025-11-12-at-15.44.47.jpeg"
+        }
+      ],
+      "capaMidiaId": 9400,
+      "modificadoEm": "2026-08-06T18:07:46Z"
+    },
+    {
+      "id": 9380,
+      "slug": "vende-4-moradias",
+      "link": "https://marcosperesimoveis.com.br/properties/vende-4-moradias/",
+      "titulo": "VENDE 4 MORADIAS",
+      "descricao": "Localizadas no bairro Bambé, com 525m² de terreno.",
+      "preco": 800000,
+      "precoTexto": null,
+      "negocio": "Venda",
+      "tipo": "Casa",
+      "cidade": "Barra de São Francisco",
+      "endereco": "Rua Prefeito Manoel Gonçalves - 527",
+      "quartos": null,
+      "banheiros": null,
+      "vagas": null,
+      "areaConstruida": null,
+      "areaTerreno": null,
+      "destaque": true,
+      "fotos": [
+        {
+          "midiaId": 9396,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6594-scaled.jpg"
+        },
+        {
+          "midiaId": 9381,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6576-scaled.jpg"
+        },
+        {
+          "midiaId": 9382,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6577-scaled.jpg"
+        },
+        {
+          "midiaId": 9383,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6578-scaled.jpg"
+        },
+        {
+          "midiaId": 9384,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6580-scaled.jpg"
+        },
+        {
+          "midiaId": 9385,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6581-scaled.jpg"
+        },
+        {
+          "midiaId": 9386,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6582-scaled.jpg"
+        },
+        {
+          "midiaId": 9387,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6583-scaled.jpg"
+        },
+        {
+          "midiaId": 9388,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6584-scaled.jpg"
+        },
+        {
+          "midiaId": 9389,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6586-scaled.jpg"
+        },
+        {
+          "midiaId": 9390,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6587-scaled.jpg"
+        },
+        {
+          "midiaId": 9391,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6588-scaled.jpg"
+        },
+        {
+          "midiaId": 9392,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6589-scaled.jpg"
+        },
+        {
+          "midiaId": 9393,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6590-scaled.jpg"
+        },
+        {
+          "midiaId": 9394,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6591-scaled.jpg"
+        },
+        {
+          "midiaId": 9395,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6592-scaled.jpg"
+        },
+        {
+          "midiaId": 9397,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6595-scaled.jpg"
+        },
+        {
+          "midiaId": 9398,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/08/IMG_6597-scaled.jpg"
+        }
+      ],
+      "capaMidiaId": 9396,
+      "modificadoEm": "2026-08-06T13:18:51Z"
+    },
+    {
+      "id": 9363,
+      "slug": "vende-casa-10",
+      "link": "https://marcosperesimoveis.com.br/properties/vende-casa-10/",
+      "titulo": "VENDE CASA",
+      "descricao": "Localizada no Centro da cidade\nImóvel conta com – 3 quartos ( 1suíte com closet ), banheiro social, sala de tv, sala de jantar, cozinha planejada, ampla garagem para mais de 2 carros, terraço, área gourmet e varanda.",
+      "preco": 1400000,
+      "precoTexto": null,
+      "negocio": "Venda",
+      "tipo": "Casa",
+      "cidade": "Barra de São Francisco",
+      "endereco": "Rua Prefeito Manoel Gonçalves - 527",
+      "quartos": null,
+      "banheiros": null,
+      "vagas": null,
+      "areaConstruida": null,
+      "areaTerreno": null,
+      "destaque": true,
+      "fotos": [
+        {
+          "midiaId": 9379,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/16-scaled.jpg"
+        },
+        {
+          "midiaId": 9364,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/01-3-scaled.jpg"
+        },
+        {
+          "midiaId": 9365,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/02-2-scaled.jpg"
+        },
+        {
+          "midiaId": 9366,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/03-3-scaled.jpg"
+        },
+        {
+          "midiaId": 9367,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/04-3-scaled.jpg"
+        },
+        {
+          "midiaId": 9368,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/05-3-scaled.jpg"
+        },
+        {
+          "midiaId": 9369,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/06-3-scaled.jpg"
+        },
+        {
+          "midiaId": 9370,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/07-1-scaled.jpg"
+        },
+        {
+          "midiaId": 9371,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/08-1-scaled.jpg"
+        },
+        {
+          "midiaId": 9372,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/09-1-scaled.jpg"
+        },
+        {
+          "midiaId": 9373,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/10-1-scaled.jpg"
+        },
+        {
+          "midiaId": 9374,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/11-1-scaled.jpg"
+        },
+        {
+          "midiaId": 9375,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/12-scaled.jpg"
+        },
+        {
+          "midiaId": 9376,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/13-scaled.jpg"
+        },
+        {
+          "midiaId": 9377,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/14.jpeg"
+        },
+        {
+          "midiaId": 9378,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/15-scaled.jpg"
+        }
+      ],
+      "capaMidiaId": 9379,
+      "modificadoEm": "2026-07-22T19:40:51Z"
+    },
+    {
+      "id": 9353,
+      "slug": "vende-obra-em-construcao-2",
+      "link": "https://marcosperesimoveis.com.br/properties/vende-obra-em-construcao-2/",
+      "titulo": "VENDE OBRA EM CONSTRUÇÃO",
+      "descricao": "Localizada no Loteamento Quiquito com 200m² de terreno.",
+      "preco": 500000,
+      "precoTexto": null,
+      "negocio": "Venda",
+      "tipo": "Casa",
+      "cidade": "Barra de São Francisco",
+      "endereco": "Rua Prefeito Manoel Gonçalves - 527",
+      "quartos": null,
+      "banheiros": null,
+      "vagas": null,
+      "areaConstruida": null,
+      "areaTerreno": null,
+      "destaque": true,
+      "fotos": [
+        {
+          "midiaId": 9358,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/DJI_20260707162735_0171_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9354,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/DJI_20260707162113_0165_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9355,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/DJI_20260707162224_0167_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9356,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/DJI_20260707162318_0168_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9357,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/DJI_20260707162628_0170_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9359,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/DJI_20260707162902_0172_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9360,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/DJI_20260707162931_0173_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9361,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/DJI_20260707163115_0174_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9362,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/DJI_20260707163223_0175_D-scaled.jpg"
+        }
+      ],
+      "capaMidiaId": 9358,
+      "modificadoEm": "2026-07-22T19:31:08Z"
+    },
+    {
+      "id": 9341,
+      "slug": "vende-terra-8",
+      "link": "https://marcosperesimoveis.com.br/properties/vende-terra-8/",
+      "titulo": "VENDE TERRA",
+      "descricao": "Localizada em Vila Paulista, com 3 alqueires, nascente na propriedade e uma casa.",
+      "preco": 1500000,
+      "precoTexto": null,
+      "negocio": "Venda",
+      "tipo": "Terra",
+      "cidade": "Barra de São Francisco",
+      "endereco": "Rua Prefeito Manoel Gonçalves - 527",
+      "quartos": null,
+      "banheiros": null,
+      "vagas": null,
+      "areaConstruida": null,
+      "areaTerreno": null,
+      "destaque": true,
+      "fotos": [
+        {
+          "midiaId": 9345,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/IMG_4068-scaled.jpg"
+        },
+        {
+          "midiaId": 9342,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/IMG_4055-scaled.jpg"
+        },
+        {
+          "midiaId": 9343,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/IMG_4061-scaled.jpg"
+        },
+        {
+          "midiaId": 9344,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/IMG_4066-scaled.jpg"
+        },
+        {
+          "midiaId": 9346,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/IMG_4075-scaled.jpg"
+        },
+        {
+          "midiaId": 9347,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/IMG_4076-scaled.jpg"
+        },
+        {
+          "midiaId": 9348,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/IMG_4082-scaled.jpg"
+        },
+        {
+          "midiaId": 9349,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/IMG_4083-scaled.jpg"
+        },
+        {
+          "midiaId": 9350,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/IMG_4087-scaled.jpg"
+        },
+        {
+          "midiaId": 9351,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/IMG_4093-scaled.jpg"
+        },
+        {
+          "midiaId": 9352,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/IMG_4095-scaled.jpg"
+        }
+      ],
+      "capaMidiaId": 9345,
+      "modificadoEm": "2026-07-22T19:13:47Z"
+    },
+    {
+      "id": 9333,
+      "slug": "vende-lote",
+      "link": "https://marcosperesimoveis.com.br/properties/vende-lote/",
+      "titulo": "VENDE LOTE",
+      "descricao": "Localizado no bairro Vila Landinha, Rua Sebastião Cipriano, medindo 200m².",
+      "preco": 100000,
+      "precoTexto": null,
+      "negocio": "Venda",
+      "tipo": "Lote",
+      "cidade": "Barra de São Francisco",
+      "endereco": "Rua Prefeito Manoel Gonçalves - 527",
+      "quartos": null,
+      "banheiros": null,
+      "vagas": null,
+      "areaConstruida": null,
+      "areaTerreno": 200,
+      "destaque": true,
+      "fotos": [
+        {
+          "midiaId": 9334,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/DJI_20260709174304_0181_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9335,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/DJI_20260709174413_0182_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9336,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/DJI_20260709174457_0183_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9337,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/DJI_20260709174530_0184_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9338,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/DJI_20260709174614_0185_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9339,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/DJI_20260710092437_0186_D-scaled.jpg"
+        }
+      ],
+      "capaMidiaId": 9334,
+      "modificadoEm": "2026-07-10T18:51:49Z"
+    },
+    {
+      "id": 9332,
+      "slug": "vende-3-moradias",
+      "link": "https://marcosperesimoveis.com.br/properties/vende-3-moradias/",
+      "titulo": "VENDE 3 MORADIAS",
+      "descricao": "Localizada na rua Prefeito Manoel Gonçalves – Centro.",
+      "preco": 400000,
+      "precoTexto": null,
+      "negocio": "Venda",
+      "tipo": "Casa",
+      "cidade": "Barra de São Francisco",
+      "endereco": "Rua Prefeito Manoel Gonçalves - 527",
+      "quartos": null,
+      "banheiros": null,
+      "vagas": null,
+      "areaConstruida": null,
+      "areaTerreno": null,
+      "destaque": true,
+      "fotos": [
+        {
+          "midiaId": 9324,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/05-2-scaled.jpg"
+        },
+        {
+          "midiaId": 9331,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/IMG_3108-1-scaled.jpg"
+        },
+        {
+          "midiaId": 9330,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/IMG_3094-1-scaled.jpg"
+        },
+        {
+          "midiaId": 9329,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/IMG_3092-1-scaled.jpg"
+        },
+        {
+          "midiaId": 9328,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/IMG_3085-1-scaled.jpg"
+        },
+        {
+          "midiaId": 9327,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/IMG_3082-1-scaled.jpg"
+        },
+        {
+          "midiaId": 9326,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/IMG_3080-1-scaled.jpg"
+        },
+        {
+          "midiaId": 9325,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/06-2-scaled.jpg"
+        },
+        {
+          "midiaId": 9323,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/04-2-scaled.jpg"
+        },
+        {
+          "midiaId": 9322,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/03-2-scaled.jpg"
+        },
+        {
+          "midiaId": 9321,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/02-1-scaled.jpg"
+        },
+        {
+          "midiaId": 9320,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/01-2-scaled.jpg"
+        }
+      ],
+      "capaMidiaId": 9324,
+      "modificadoEm": "2026-07-09T16:46:46Z"
+    },
+    {
+      "id": 9303,
+      "slug": "vende-casa-5",
+      "link": "https://marcosperesimoveis.com.br/properties/vende-casa-5/",
+      "titulo": "VENDE CASA",
+      "descricao": "Localizada no bairro Nova Barra, saída para Mantena-MG.\nImóvel conta com – Sala, cozinha, copa, 3 quartos, banheiro social, área de serviço, terraço, garagem e quintal.\nTerreno com 200m².",
+      "preco": 210000,
+      "precoTexto": null,
+      "negocio": "Venda",
+      "tipo": "Casa",
+      "cidade": "Barra de São Francisco",
+      "endereco": "Rua Prefeito Manoel Gonçalves - 527",
+      "quartos": 3,
+      "banheiros": 1,
+      "vagas": 1,
+      "areaConstruida": null,
+      "areaTerreno": null,
+      "destaque": true,
+      "fotos": [
+        {
+          "midiaId": 9304,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/DJI_20260702165139_0079_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9305,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/DJI_20260702165256_0081_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9306,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/DJI_20260702165539_0082_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9307,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/IMG_6531-scaled.jpg"
+        },
+        {
+          "midiaId": 9308,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/IMG_6533-scaled.jpg"
+        },
+        {
+          "midiaId": 9309,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/IMG_6534-scaled.jpg"
+        },
+        {
+          "midiaId": 9310,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/IMG_6535-scaled.jpg"
+        },
+        {
+          "midiaId": 9311,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/IMG_6536-scaled.jpg"
+        },
+        {
+          "midiaId": 9312,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/IMG_6543-scaled.jpg"
+        },
+        {
+          "midiaId": 9313,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/IMG_6546-scaled.jpg"
+        },
+        {
+          "midiaId": 9314,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/IMG_6549-scaled.jpg"
+        },
+        {
+          "midiaId": 9315,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/IMG_6550-scaled.jpg"
+        },
+        {
+          "midiaId": 9316,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/IMG_6551-scaled.jpg"
+        },
+        {
+          "midiaId": 9317,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/IMG_6552-scaled.jpg"
+        },
+        {
+          "midiaId": 9318,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/IMG_6553-scaled.jpg"
+        }
+      ],
+      "capaMidiaId": 9304,
+      "modificadoEm": "2026-07-09T16:35:41Z"
+    },
+    {
+      "id": 9302,
+      "slug": "vende-duplex-2",
+      "link": "https://marcosperesimoveis.com.br/properties/vende-duplex-2/",
+      "titulo": "VENDE DUPLEX",
+      "descricao": "Localizado no bairro Campo Novo, Loteamento Morada Feliz.\nImóvel conta com – Sala, cozinha, banheiro social, 2 quartos, terraço e uma varanda.",
+      "preco": 300000,
+      "precoTexto": null,
+      "negocio": "Venda",
+      "tipo": "Casa",
+      "cidade": "Barra de São Francisco",
+      "endereco": "Rua Prefeito Manoel Gonçalves - 527",
+      "quartos": 2,
+      "banheiros": 1,
+      "vagas": null,
+      "areaConstruida": null,
+      "areaTerreno": null,
+      "destaque": true,
+      "fotos": [
+        {
+          "midiaId": 9300,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/DJI_20260707164421_0177_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9301,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/DJI_20260707164453_0178_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9299,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/DJI_20260707164324_0176_D-scaled.jpg"
+        },
+        {
+          "midiaId": 9298,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/11-scaled.jpg"
+        },
+        {
+          "midiaId": 9297,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/10-scaled.jpg"
+        },
+        {
+          "midiaId": 9296,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/09-scaled.jpg"
+        },
+        {
+          "midiaId": 9295,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/08-scaled.jpg"
+        },
+        {
+          "midiaId": 9294,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/07-scaled.jpg"
+        },
+        {
+          "midiaId": 9293,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/06-1-scaled.jpg"
+        },
+        {
+          "midiaId": 9292,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/05-1-scaled.jpg"
+        },
+        {
+          "midiaId": 9291,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/04-1-scaled.jpg"
+        },
+        {
+          "midiaId": 9290,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/03-1-scaled.jpg"
+        },
+        {
+          "midiaId": 9289,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/02.jpeg"
+        },
+        {
+          "midiaId": 9288,
+          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/07/01-1-scaled.jpg"
+        }
+      ],
+      "capaMidiaId": 9300,
+      "modificadoEm": "2026-07-09T16:23:08Z"
+    },
     {
       "id": 9258,
       "slug": "vende-apartamento-3",
@@ -585,45 +2054,6 @@
       "modificadoEm": "2026-06-25T17:57:46Z"
     },
     {
-      "id": 9145,
-      "slug": "vende-predio-5",
-      "link": "https://marcosperesimoveis.com.br/properties/vende-predio-5/",
-      "titulo": "VENDE PRÉDIO",
-      "descricao": "Imóvel com dois andares, localizado no bairro Vila Landinha, rua Sebastião Sipriano.",
-      "preco": 330000,
-      "precoTexto": null,
-      "negocio": "Venda",
-      "tipo": "Prédio",
-      "cidade": "Barra de São Francisco",
-      "endereco": "Rua Prefeito Manoel Gonçalves - 527",
-      "quartos": null,
-      "banheiros": null,
-      "vagas": null,
-      "areaConstruida": null,
-      "areaTerreno": null,
-      "destaque": true,
-      "fotos": [
-        {
-          "midiaId": 9147,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/06/DJI_20260602172156_0043_D-scaled.jpg"
-        },
-        {
-          "midiaId": 9146,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/06/DJI_20260602172115_0042_D-scaled.jpg"
-        },
-        {
-          "midiaId": 9148,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/06/DJI_20260603165809_0050_D-scaled.jpg"
-        },
-        {
-          "midiaId": 9149,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/06/DJI_20260603170943_0053_D-scaled.jpg"
-        }
-      ],
-      "capaMidiaId": 9147,
-      "modificadoEm": "2026-06-17T19:46:24Z"
-    },
-    {
       "id": 9138,
       "slug": "vende-galpao",
       "link": "https://marcosperesimoveis.com.br/properties/vende-galpao/",
@@ -1204,83 +2634,12 @@
       "modificadoEm": "2026-05-04T18:40:51Z"
     },
     {
-      "id": 9005,
-      "slug": "vende-apartamento",
-      "link": "https://marcosperesimoveis.com.br/properties/vende-apartamento/",
-      "titulo": "VENDE APARTAMENTO",
-      "descricao": "Localizado no bairro Cruzeiro, no primeiro andar superior.\nImóvel conta com :\n– 3 quartos,\n– sala, cozinha e sala de jantar integradas\n– 1 banheiro social\n– área de serviço e uma varanda.",
-      "preco": 250000,
-      "precoTexto": null,
-      "negocio": "Venda",
-      "tipo": "Apartamento",
-      "cidade": "Barra de São Francisco",
-      "endereco": null,
-      "quartos": null,
-      "banheiros": null,
-      "vagas": null,
-      "areaConstruida": null,
-      "areaTerreno": null,
-      "destaque": true,
-      "fotos": [
-        {
-          "midiaId": 9006,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/04/IMG_6373-scaled.jpg"
-        },
-        {
-          "midiaId": 9007,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/04/IMG_6374-scaled.jpg"
-        },
-        {
-          "midiaId": 9008,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/04/IMG_6376-scaled.jpg"
-        },
-        {
-          "midiaId": 9009,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/04/IMG_6377-scaled.jpg"
-        },
-        {
-          "midiaId": 9018,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/04/IMG_6380-1-scaled.jpg"
-        },
-        {
-          "midiaId": 9011,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/04/IMG_6382-scaled.jpg"
-        },
-        {
-          "midiaId": 9012,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/04/IMG_6383-scaled.jpg"
-        },
-        {
-          "midiaId": 9013,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/04/IMG_6384-scaled.jpg"
-        },
-        {
-          "midiaId": 9014,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/04/IMG_6386-scaled.jpg"
-        },
-        {
-          "midiaId": 9015,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/04/IMG_6389-scaled.jpg"
-        },
-        {
-          "midiaId": 9016,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/04/IMG_6390-scaled.jpg"
-        },
-        {
-          "midiaId": 9017,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/04/IMG_6391-scaled.jpg"
-        }
-      ],
-      "capaMidiaId": 9006,
-      "modificadoEm": "2026-04-30T19:31:25Z"
-    },
-    {
       "id": 9000,
       "slug": "vende-casa-8",
       "link": "https://marcosperesimoveis.com.br/properties/vende-casa-8/",
       "titulo": "VENDE CASA",
       "descricao": "Localizada na rua Capitão Antônio Lopes Tatagiba, no bairro Irmãos Fernandes, próximo a Câmara Municipal.\nÁrea do terreno – 295,26m²",
-      "preco": 500000,
+      "preco": 700000,
       "precoTexto": null,
       "negocio": "Venda",
       "tipo": "Casa",
@@ -1311,7 +2670,7 @@
         }
       ],
       "capaMidiaId": 9003,
-      "modificadoEm": "2026-04-23T18:54:31Z"
+      "modificadoEm": "2026-08-18T14:00:52Z"
     },
     {
       "id": 8989,
@@ -1367,45 +2726,6 @@
       ],
       "capaMidiaId": 8992,
       "modificadoEm": "2026-06-22T17:23:33Z"
-    },
-    {
-      "id": 8984,
-      "slug": "vende-lote-4",
-      "link": "https://marcosperesimoveis.com.br/properties/vende-lote-4/",
-      "titulo": "VENDE LOTE",
-      "descricao": "Localizado no bairro Vila Landinha, contendo 1.132 m².\nCom um grande potencial para investimento ou construção, lote escriturado.",
-      "preco": 370000,
-      "precoTexto": null,
-      "negocio": "Venda",
-      "tipo": "Lote",
-      "cidade": "Barra de São Francisco",
-      "endereco": null,
-      "quartos": null,
-      "banheiros": null,
-      "vagas": null,
-      "areaConstruida": null,
-      "areaTerreno": null,
-      "destaque": true,
-      "fotos": [
-        {
-          "midiaId": 8987,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/04/663114148_26670498099212219_8172573064721014042_n.jpg"
-        },
-        {
-          "midiaId": 8985,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/04/662935259_26670498589212170_3503907910454466178_n.jpg"
-        },
-        {
-          "midiaId": 8986,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/04/662947102_26670498125878883_6288984904014725592_n.jpg"
-        },
-        {
-          "midiaId": 8988,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/04/665935721_26670498059212223_7400444004459268439_n.jpg"
-        }
-      ],
-      "capaMidiaId": 8987,
-      "modificadoEm": "2026-04-23T17:51:28Z"
     },
     {
       "id": 8948,
@@ -3037,81 +4357,6 @@
       "modificadoEm": "2026-02-19T13:50:36Z"
     },
     {
-      "id": 8440,
-      "slug": "vende-casa-2",
-      "link": "https://marcosperesimoveis.com.br/properties/vende-casa-2/",
-      "titulo": "VENDE CASA",
-      "descricao": "Localizada no Centro da Cidade de Barra de São Francisco, rua Gomercino Farias, com 800m² de terreno.",
-      "preco": 1500000,
-      "precoTexto": null,
-      "negocio": "Venda",
-      "tipo": "Casa",
-      "cidade": "Barra de São Francisco",
-      "endereco": null,
-      "quartos": null,
-      "banheiros": null,
-      "vagas": null,
-      "areaConstruida": null,
-      "areaTerreno": null,
-      "destaque": true,
-      "fotos": [
-        {
-          "midiaId": 8443,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/02/03-8-scaled.jpg"
-        },
-        {
-          "midiaId": 8441,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/02/01-12-scaled.jpg"
-        },
-        {
-          "midiaId": 8442,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/02/02-8-scaled.jpg"
-        },
-        {
-          "midiaId": 8444,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/02/04-8-scaled.jpg"
-        },
-        {
-          "midiaId": 8445,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/02/IMG_5219-scaled.jpg"
-        },
-        {
-          "midiaId": 8446,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/02/IMG_5222-scaled.jpg"
-        },
-        {
-          "midiaId": 8447,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/02/IMG_5225-scaled.jpg"
-        },
-        {
-          "midiaId": 8448,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/02/IMG_5226-scaled.jpg"
-        },
-        {
-          "midiaId": 8449,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/02/IMG_5230-scaled.jpg"
-        },
-        {
-          "midiaId": 8450,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/02/IMG_5235-scaled.jpg"
-        },
-        {
-          "midiaId": 8451,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/02/IMG_5236-scaled.jpg"
-        },
-        {
-          "midiaId": 8452,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/02/IMG_5238-scaled.jpg"
-        },
-        {
-          "midiaId": 8453,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2026/02/IMG_5241-scaled.jpg"
-        }
-      ],
-      "capaMidiaId": 8443,
-      "modificadoEm": "2026-02-19T13:31:55Z"
-    },
-    {
       "id": 8422,
       "slug": "vende-predio-4",
       "link": "https://marcosperesimoveis.com.br/properties/vende-predio-4/",
@@ -3824,7 +5069,7 @@
       "link": "https://marcosperesimoveis.com.br/properties/vende-ponto-comercial/",
       "titulo": "VENDE PONTO COMERCIAL",
       "descricao": "Localizada na Avenida Castelo Branco, bairro Vila Landinha, medindo 400m².",
-      "preco": 900000,
+      "preco": 800000,
       "precoTexto": null,
       "negocio": "Venda",
       "tipo": "Comercial",
@@ -3863,7 +5108,7 @@
         }
       ],
       "capaMidiaId": 8248,
-      "modificadoEm": "2026-02-13T18:53:31Z"
+      "modificadoEm": "2026-08-25T13:45:50Z"
     },
     {
       "id": 8237,
@@ -4241,8 +5486,8 @@
       "slug": "vende-area-comercial-2",
       "link": "https://marcosperesimoveis.com.br/properties/vende-area-comercial-2/",
       "titulo": "VENDE ÁREA COMERCIAL",
-      "descricao": "Localizada próximo as 3 vendas, com 2 alqueires, possui terra planagem.",
-      "preco": 2000000,
+      "descricao": "Localizada próximo as 3 vendas, com 2 alqueires, possui terra planagem e Pórtico.",
+      "preco": 2500000,
       "precoTexto": null,
       "negocio": "Venda",
       "tipo": "Terra",
@@ -4289,7 +5534,7 @@
         }
       ],
       "capaMidiaId": 8172,
-      "modificadoEm": "2026-02-13T18:02:35Z"
+      "modificadoEm": "2026-08-18T14:02:30Z"
     },
     {
       "id": 8158,
@@ -4578,141 +5823,6 @@
       ],
       "capaMidiaId": 8107,
       "modificadoEm": "2026-03-30T17:27:18Z"
-    },
-    {
-      "id": 8054,
-      "slug": "vende-sitio-no-corrego-miracema-17-00000-m%c2%b2",
-      "link": "https://marcosperesimoveis.com.br/properties/vende-sitio-no-corrego-miracema-17-00000-m%c2%b2/",
-      "titulo": "VENDE SÍTIO NO CÓRREGO MIRACEMA – 17.000,00 M²",
-      "descricao": "Localizado no Córrego do Miracema – 7Km da Cidade.\nCom 17.000m², Quadra de Beach Tênis, Peixeiro, Área Gourmet, Árvores frutíferas, Ampla área gramada e uma Excelente casa.\nValor do investimento – R$1.000.000\nMais informações: (27) 99832-1028",
-      "preco": 1000000,
-      "precoTexto": null,
-      "negocio": "Venda",
-      "tipo": "Chácara, Sitio, Terra",
-      "cidade": "Barra de São Francisco",
-      "endereco": null,
-      "quartos": null,
-      "banheiros": null,
-      "vagas": null,
-      "areaConstruida": null,
-      "areaTerreno": null,
-      "destaque": true,
-      "fotos": [
-        {
-          "midiaId": 8063,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2025/07/09-1-scaled.jpg"
-        },
-        {
-          "midiaId": 8055,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2025/07/01-5-scaled.jpg"
-        },
-        {
-          "midiaId": 8056,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2025/07/02-2-scaled.jpg"
-        },
-        {
-          "midiaId": 8057,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2025/07/03-2-scaled.jpg"
-        },
-        {
-          "midiaId": 8058,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2025/07/04-1-scaled.jpg"
-        },
-        {
-          "midiaId": 8059,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2025/07/05-1-scaled.jpg"
-        },
-        {
-          "midiaId": 8060,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2025/07/06-1-scaled.jpg"
-        },
-        {
-          "midiaId": 8061,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2025/07/07-1-scaled.jpg"
-        },
-        {
-          "midiaId": 8062,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2025/07/08-1-scaled.jpg"
-        },
-        {
-          "midiaId": 8064,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2025/07/10-1-scaled.jpg"
-        },
-        {
-          "midiaId": 8065,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2025/07/11-1-scaled.jpg"
-        },
-        {
-          "midiaId": 8066,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2025/07/12-1-scaled.jpg"
-        },
-        {
-          "midiaId": 8067,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2025/07/13-scaled.jpg"
-        },
-        {
-          "midiaId": 8068,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2025/07/14-scaled.jpg"
-        },
-        {
-          "midiaId": 8069,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2025/07/15-scaled.jpg"
-        },
-        {
-          "midiaId": 8070,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2025/07/16-scaled.jpg"
-        },
-        {
-          "midiaId": 8071,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2025/07/17-scaled.jpg"
-        },
-        {
-          "midiaId": 8072,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2025/07/18-scaled.jpg"
-        },
-        {
-          "midiaId": 8073,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2025/07/19-scaled.jpg"
-        },
-        {
-          "midiaId": 8074,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2025/07/20-scaled.jpg"
-        },
-        {
-          "midiaId": 8075,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2025/07/21-scaled.jpg"
-        },
-        {
-          "midiaId": 8779,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2025/07/22-scaled.jpg"
-        },
-        {
-          "midiaId": 8780,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2025/07/23-scaled.jpg"
-        },
-        {
-          "midiaId": 8781,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2025/07/24-scaled.jpg"
-        },
-        {
-          "midiaId": 8782,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2025/07/25-scaled.jpg"
-        },
-        {
-          "midiaId": 8783,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2025/07/26-scaled.jpg"
-        },
-        {
-          "midiaId": 8784,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2025/07/27-scaled.jpg"
-        },
-        {
-          "midiaId": 8785,
-          "url": "https://marcosperesimoveis.com.br/wp-content/uploads/2025/07/28-scaled.jpg"
-        }
-      ],
-      "capaMidiaId": 8063,
-      "modificadoEm": "2026-04-10T19:42:53Z"
     },
     {
       "id": 8045,

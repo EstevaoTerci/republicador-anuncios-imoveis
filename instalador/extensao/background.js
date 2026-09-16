@@ -50891,17 +50891,7 @@ Originally allocated`);
 								nodeId,
 								files
 							});
-							yield cdpSessionManager.sendCommand(tabId, "Runtime.evaluate", { expression: `
-            (function() {
-              const element = document.querySelector('${selector.replace(/'/g, "\\'")}');
-              if (element) {
-                const event = new Event('change', { bubbles: true });
-                element.dispatchEvent(event);
-                return true;
-              }
-              return false;
-            })()
-          ` });
+							/* PATCH republicador 15/09/2026: DOM.setFileInputFiles ja dispara "change"; o dispatch manual duplicava a foto no Facebook. */
 						}));
 						return {
 							content: [{

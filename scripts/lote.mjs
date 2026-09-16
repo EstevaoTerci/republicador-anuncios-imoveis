@@ -178,16 +178,18 @@ async function ficha(id) {
     formulario: {
       'Imóvel residencial para venda ou locação': a.negocio === 'Venda' ? 'À venda' : 'Aluguel',
       'Tipo de imóvel': t.formulario ?? `NÃO PUBLICAR — ${t.motivo}`,
-      'Número de quartos': a.quartos ?? '(não informado no site — deixe em branco)',
-      'Número de banheiros': a.banheiros ?? '(não informado no site — deixe em branco)',
+      'Número de quartos': a.quartos ?? (cfg.quartosPadrao ?? 1),
+      'Número de banheiros': a.banheiros ?? (cfg.banheirosPadrao ?? 1),
       'Preço (só dígitos)': a.preco != null ? String(a.preco) : `NÃO PUBLICAR — sem preço (${a.precoTexto ?? 'consulte'})`,
       'Metros quadrados': a.areaConstruida ?? a.areaTerreno ?? '(não informado — deixe em branco)',
-      'Localização (cidade a digitar)': a.cidade,
+      'Localização (digitar exatamente)': `${a.cidade}, ${(cfg.ufPorCidade || {})[a.cidade] || cfg.ufPadrao || 'ES'}`,
+      'Localização (opção a escolher, regex)': `^(\\d{5}-\\d{3}\\s+)?${a.cidade}, ${(cfg.ufPorCidade || {})[a.cidade] || cfg.ufPadrao || 'ES'}\\s+Cidade$`,
       'Descrição do imóvel': (t.forcado ? `${a.titulo}
 
 ` : '') + formatarDescricao(a.descricao),
     },
-    avisoTipo: t.forcado ? `Tipo real no site: "${t.tipoReal}". Vai como "${t.formulario}" por configuração. Quartos/banheiros sem valor: deixe em branco; se o formulário exigir, coloque 0.` : null,
+    avisoTipo: t.forcado ? `Tipo real no site: "${t.tipoReal}". Vai como "${t.formulario}" por configuração.` : null,
+    avisoQuartos: (a.quartos == null || a.banheiros == null) ? `O site não informa ${a.quartos == null ? 'quartos' : ''}${a.quartos == null && a.banheiros == null ? ' nem ' : ''}${a.banheiros == null ? 'banheiros' : ''}; a ficha usa o padrão de estado/config.json.` : null,
     fotos: {
       total: fotos.length,
       aviso: fotos.length ? null : `Fotos ainda não baixadas. Rode: node scripts/coleta.mjs --fotos ${a.id}`,

@@ -1,9 +1,145 @@
 {
-  "em": "2026-07-02T01:52:41.454Z",
-  "totalAtivos": 82,
+  "em": "2026-09-16T00:48:54.048Z",
+  "totalAtivos": 96,
   "primeiraColeta": false,
-  "novos": [],
-  "removidos": [],
-  "precoAlterado": [],
+  "novos": [
+    {
+      "id": 9584,
+      "titulo": "VENDE GALPÃO",
+      "preco": 1000000
+    },
+    {
+      "id": 9560,
+      "titulo": "VENDE TERRA",
+      "preco": 1100000
+    },
+    {
+      "id": 9554,
+      "titulo": "VENDE 2 LOTES",
+      "preco": 500000
+    },
+    {
+      "id": 9539,
+      "titulo": "VENDE CASA",
+      "preco": 230000
+    },
+    {
+      "id": 9496,
+      "titulo": "VENDE CASA",
+      "preco": 700000
+    },
+    {
+      "id": 9490,
+      "titulo": "VENDE LOTES",
+      "preco": 700
+    },
+    {
+      "id": 9459,
+      "titulo": "VENDE SÍTIO",
+      "preco": 2000000
+    },
+    {
+      "id": 9450,
+      "titulo": "VENDE LOTE",
+      "preco": 350000
+    },
+    {
+      "id": 9431,
+      "titulo": "VENDE CASA",
+      "preco": 265000
+    },
+    {
+      "id": 9430,
+      "titulo": "VENDE PRÉDIO",
+      "preco": 700000
+    },
+    {
+      "id": 9399,
+      "titulo": "ALUGA CASA",
+      "preco": 3000
+    },
+    {
+      "id": 9380,
+      "titulo": "VENDE 4 MORADIAS",
+      "preco": 800000
+    },
+    {
+      "id": 9363,
+      "titulo": "VENDE CASA",
+      "preco": 1400000
+    },
+    {
+      "id": 9353,
+      "titulo": "VENDE OBRA EM CONSTRUÇÃO",
+      "preco": 500000
+    },
+    {
+      "id": 9341,
+      "titulo": "VENDE TERRA",
+      "preco": 1500000
+    },
+    {
+      "id": 9333,
+      "titulo": "VENDE LOTE",
+      "preco": 100000
+    },
+    {
+      "id": 9332,
+      "titulo": "VENDE 3 MORADIAS",
+      "preco": 400000
+    },
+    {
+      "id": 9303,
+      "titulo": "VENDE CASA",
+      "preco": 210000
+    },
+    {
+      "id": 9302,
+      "titulo": "VENDE DUPLEX",
+      "preco": 300000
+    }
+  ],
+  "removidos": [
+    {
+      "id": 9145,
+      "titulo": "VENDE PRÉDIO"
+    },
+    {
+      "id": 9005,
+      "titulo": "VENDE APARTAMENTO"
+    },
+    {
+      "id": 8984,
+      "titulo": "VENDE LOTE"
+    },
+    {
+      "id": 8440,
+      "titulo": "VENDE CASA"
+    },
+    {
+      "id": 8054,
+      "titulo": "VENDE SÍTIO NO CÓRREGO MIRACEMA – 17.000,00 M²"
+    }
+  ],
+  "precoAlterado": [
+    {
+      "id": 9000,
+      "titulo": "VENDE CASA",
+      "precoAntes": 500000,
+      "precoAgora": 700000
+    },
+    {
+      "id": 8247,
+      "titulo": "VENDE PONTO COMERCIAL",
+      "precoAntes": 900000,
+      "precoAgora": 800000
+    },
+    {
+      "id": 8168,
+      "titulo": "VENDE ÁREA COMERCIAL",
+      "precoAntes": 2000000,
+      "precoAgora": 2500000
+    }
+  ],
   "semFoto": []
 }
