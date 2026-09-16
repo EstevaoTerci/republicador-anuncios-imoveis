@@ -24,6 +24,8 @@ Uma pessoa **leiga em tecnologia**. Regras de comunicação:
 - `estado/publicados.json` — o que já foi publicado no Marketplace (veja o esquema abaixo). Atualize após **cada** anúncio processado via `scripts/estado.mjs`, nunca só no final.
 - `estado/grupos.json` — em quais grupos do Facebook publicar junto (escolha do usuário, feita uma vez na primeira publicação e editável pela skill `configurar-grupos`). Publicar em grupos aumenta alcance E o risco de sinalização: respeite a escolha, mas nunca marque grupos fora dela.
 - `estado/logs/AAAA-MM-DD/` — screenshots de confirmação de cada publicação/renovação.
+- `estado/aprendizados.json` + `scripts/aprendizado.mjs` — caderno de aprendizados (ver seção "Aprendizado contínuo"). É injetado automaticamente no início de cada sessão.
+- `Atualizar.ps1` — atualiza o programa a partir do repositório preservando `estado/` e fotos. **Nunca** atualize copiando a pasta inteira por cima: isso apaga o estado.
 
 ### Esquema de `estado/publicados.json`
 
@@ -87,6 +89,18 @@ Uma pessoa **leiga em tecnologia**. Regras de comunicação:
 10. O classificado nasce **"em análise"** e SEM link do item disponível. Registre `tituloPublicado` e `linkMarketplace: null`; capture o link na rodada seguinte abrindo o card em "Seus classificados".
 - Preço `null` com `precoTexto` ("Consulte"): pergunte ao usuário o que fazer com esse anúncio.
 - Descrição: use `descricao` do catálogo em parágrafos curtos; mantenha os telefones que já estão no texto. Não invente dados — o que não estiver no catálogo fica de fora.
+
+## Aprendizado contínuo (obrigatório)
+
+O caderno `estado/aprendizados.json` aparece no início de cada sessão (injetado pela inicialização). Regras:
+
+1. **Antes de tentar resolver um problema, procure no caderno.** Se já existe uma solução para a mesma etapa/problema, aplique-a primeiro. Se funcionar, rode `node scripts/aprendizado.mjs confirmar <n>`.
+2. **Registre no momento em que acontecer**, não no fim da rodada, sempre que: algo falhou e você precisou de uma segunda tentativa ou de um caminho alternativo; um elemento do Facebook não foi encontrado com o XPath esperado e outro funcionou; um comando ou script deu erro; o usuário precisou intervir de um jeito não previsto no roteiro; o Facebook mostrou uma tela nova.
+   `node scripts/aprendizado.mjs registrar --etapa "<etapa>" --problema "<o que deu errado, concreto>" --solucao "<o que funcionou, concreto o bastante para repetir>"`
+   Se ainda não achou solução: `--pendente` no lugar de `--solucao`, e volte com `resolver <n> --solucao ...` quando achar.
+3. Problema e solução devem ser **concretos e reproduzíveis** ("botão Renovar não aparece na página do item; aparece em Seus classificados, dentro do card, XPath //span[text()='Renovar anúncio']"), nunca vagos ("deu erro, tentei de novo").
+4. Não registre o que já está escrito neste CLAUDE.md nem o que é só instabilidade passageira (site lento, internet caiu). Registre padrões.
+5. No resumo final da rodada, diga em uma linha quantos aprendizados novos foram registrados. O Estêvão revisa o caderno de tempos em tempos e promove os confirmados para este CLAUDE.md.
 
 ## Aviso permanente
 

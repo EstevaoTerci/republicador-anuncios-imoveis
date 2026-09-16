@@ -13,5 +13,19 @@
       "Bash(mv:*)",
       "WebFetch(domain:marcosperesimoveis.com.br)"
     ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node scripts/aprendizado.mjs listar",
+            "timeout": 15,
+            "statusMessage": "Lendo o caderno de aprendizados..."
+          }
+        ]
+      }
+    ]
   }
 }

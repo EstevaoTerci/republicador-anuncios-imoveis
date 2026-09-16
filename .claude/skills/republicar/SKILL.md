@@ -92,9 +92,10 @@ Rode `sleep 60` no Bash antes de começar cada item a partir do segundo. Nunca e
 
 ### 3.5 Falhas e avisos
 
+- **Caderno de aprendizados** (seção "Aprendizado contínuo" do CLAUDE.md): antes de contornar qualquer falha, veja se o caderno já tem a solução e aplique-a. Sempre que uma segunda tentativa ou um caminho alternativo funcionar, registre na hora com `node scripts/aprendizado.mjs registrar --etapa ... --problema ... --solucao ...`. Se desistir de um item, registre com `--pendente`.
 - Se um item falhar duas vezes: `node scripts/estado.mjs erro <id> --motivo "<motivo curto>"`, avise em uma frase e **siga para o próximo**. Não trave a rodada.
 - Se o Facebook mostrar aviso, verificação, bloqueio ou captcha: tire screenshot, salve em `estado/logs/`, avise o usuário para resolver manualmente e **encerre a rodada** (Fase 4). Nunca tente contornar.
 
 ## Fase 4 — Resumo final
 
-Informe em poucas linhas: quantos publicados (e em quais grupos), renovados, removidos, com erro; quantos ficaram para a próxima rodada (o `lote.mjs` já disse); quantos foram publicados com tipo adaptado (o `lote.mjs` marca com *) e os que ficaram fora do formulário, se houver; grupos novos detectados no Facebook (lembre que dá para ligá-los com "configurar grupos"); e qualquer pendência que dependa do usuário. Termine desejando uma boa semana.
+Informe em poucas linhas: quantos publicados (e em quais grupos), renovados, removidos, com erro; quantos ficaram para a próxima rodada (o `lote.mjs` já disse); quantos foram publicados com tipo adaptado (o `lote.mjs` marca com *) e os que ficaram fora do formulário, se houver; grupos novos detectados no Facebook (lembre que dá para ligá-los com "configurar grupos"); quantos aprendizados novos foram registrados no caderno; e qualquer pendência que dependa do usuário. Termine desejando uma boa semana.

@@ -10,6 +10,8 @@ Guia do usuário final: [LEIA-ME.md](LEIA-ME.md). Regras de operação da sessã
 | --- | --- |
 | `scripts/coleta.mjs` | Coleta via WP REST API (`/wp-json/wp/v2/property`, metadados em `cmb2`); catálogo + diff + download de fotos em alta (remove sufixo `-WxH`) |
 | `scripts/lote.mjs` | Lote da semana determinístico (prioridade, 7 dias, tipos aceitos, limite 10) + `ficha <id>` com campos do formulário e caminhos das fotos + `links` pendentes. Grava `estado/lote-atual.json` |
+| `scripts/aprendizado.mjs` | Caderno de aprendizados (`estado/aprendizados.json`): registrar/resolver/confirmar. Hook `SessionStart` em `.claude/settings.json` injeta o caderno no contexto de toda sessão |
+| `Atualizar.ps1` | Atualiza o programa pelo zip do repositório preservando `estado/` e `catalogo/fotos/` |
 | `scripts/estado.mjs` | Única forma de gravar `estado/publicados.json` (publicado/renovado/link/removido-site/removido/erro/mostrar) |
 | `.claude/skills/republicar` | Rotina semanal completa (o atalho dispara `claude "/republicar"`); roteiro explícito pensado para rodar também no Sonnet |
 | `.claude/skills/atualizar-catalogo` | Só coleta + resumo de mudanças |

@@ -44,6 +44,25 @@ ETAPA C — Quando terminar a etapa 5 do roteiro, me dê um resumo de 3 linhas: 
 Comece agora pela ETAPA A.
 ```
 
+## Atualizar uma instalação existente
+
+Nunca copie a pasta inteira por cima: isso apaga o estado (anúncios publicados, grupos, aprendizados). Use um dos dois caminhos:
+
+- **Se a pasta já tem o `Atualizar.ps1`**: botão direito nele → Executar com o PowerShell. Ou peça ao Claude dele: "rode powershell -NoProfile -ExecutionPolicy Bypass -File .Atualizar.ps1 -SemPausa".
+- **Se a instalação é antiga e ainda não tem o `Atualizar.ps1`** (primeira atualização), colar no PowerShell:
+  ```powershell
+  $zip = "$env:TEMPepublicador.zip"
+  Invoke-WebRequest -Uri "https://github.com/EstevaoTerci/republicador-anuncios-imoveis/archive/refs/heads/main.zip" -OutFile $zip
+  $tmp = "$env:TEMPepublicador-extraido"
+  if (Test-Path $tmp) { Remove-Item $tmp -Recurse -Force }
+  Expand-Archive -Path $zip -DestinationPath $tmp -Force
+  $origem = "$tmpepublicador-anuncios-imoveis-main"
+  Remove-Item "$origemestado" -Recurse -Force
+  $destino = Join-Path ([Environment]::GetFolderPath('MyDocuments')) 'anuncios-imoveis-ruy'
+  Copy-Item -Path "$origem*" -Destination $destino -Recurse -Force
+  if (-not (Test-Path "$destinoestadoconfig.json")) { Expand-Archive -Path $zip -DestinationPath $tmp -Force; Copy-Item "$origemestadoconfig.json" "$destinoestado\" }
+  ```
+
 ## Depois da instalação
 
 A primeira rodada é feita pelo atalho **"Republicar Anuncios"** da área de trabalho, com o Estêvão acompanhando por tela compartilhada (escolha dos grupos, clique na sugestão de cidade, confirmação do lote). Ver `entrega/ROTEIRO-INSTALACAO.md`, passos 8 a 10.
