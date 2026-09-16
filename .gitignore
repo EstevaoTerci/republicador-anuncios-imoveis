@@ -10,3 +10,5 @@ entrega/*.zip
 node_modules/
 # Lote calculado a cada rodada (derivado)
 estado/lote-atual.json
+# Versao instalada (gravada pelo Republicar.ps1 na maquina do operador)
+estado/versao.txt

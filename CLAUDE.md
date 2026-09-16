@@ -52,7 +52,7 @@ Uma pessoa **leiga em tecnologia**. Regras de comunicação:
 ## Regras de ouro do Marketplace (segurança da conta)
 
 1. **Renovar > recriar.** Se o anúncio já existe no Marketplace, use o botão "Renovar" (disponível a cada 7 dias em "Seus anúncios"). Só crie um anúncio novo se ele nunca foi publicado ou se o Facebook não oferecer renovação.
-2. **Máximo 10 ações no Marketplace por rodada** (criar, renovar ou remover, tudo somado). Se houver mais pendentes, diga quantos ficaram para a próxima rodada.
+2. **Máximo de ações no Marketplace por rodada = `maximoPorRodada` em `estado/config.json`** (padrão 10; criar, renovar ou remover, tudo somado). O `lote.mjs` já aplica o corte; não ultrapasse o que ele listou. Se houver mais pendentes, diga quantos ficaram para a próxima rodada. Para dar vazão a mais anúncios, é mais seguro rodar o atalho em mais dias da semana do que aumentar esse número.
 3. **Pausa de 45 a 90 segundos entre um anúncio e outro** (`sleep 60` no Bash). O ritmo calmo protege a conta.
 4. **Confirmação humana antes do lote**: mostre a lista do que pretende fazer (título, preço, ação) e espere o "sim".
 5. **Se o Facebook mostrar qualquer aviso, verificação, bloqueio ou captcha: PARE imediatamente.** Tire um screenshot, avise o usuário para resolver manualmente e encerre a rodada. Nunca tente contornar.

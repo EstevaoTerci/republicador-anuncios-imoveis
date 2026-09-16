@@ -34,6 +34,29 @@ if (-not (Get-Command claude -ErrorAction SilentlyContinue)) {
     Falha 'O programa "Claude" nao foi encontrado. Rode o Instalar.ps1 ou chame o suporte.'
 }
 
+# 1b) Atualizacao automatica: compara a versao publicada no repositorio com a instalada.
+#     Se houver novidade, roda o Atualizar.ps1 (que preserva a pasta "estado"). Sem internet, segue normal.
+try {
+    $arqVersao = Join-Path $raiz 'estado\versao.txt'
+    $instalada = if (Test-Path $arqVersao) { (Get-Content $arqVersao -Raw).Trim() } else { '' }
+    $api = 'https://api.github.com/repos/EstevaoTerci/republicador-anuncios-imoveis/commits/main'
+    $remota = (Invoke-RestMethod -Uri $api -Headers @{ 'User-Agent' = 'republicador' } -TimeoutSec 8).sha
+    if ($remota -and $remota -ne $instalada) {
+        Write-Host 'Encontrei uma atualizacao do programa. Aplicando (leva menos de 1 minuto)...' -ForegroundColor Yellow
+        & powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path $raiz 'Atualizar.ps1') -SemPausa
+        if ($LASTEXITCODE -eq 0) {
+            New-Item -ItemType Directory -Force -Path (Split-Path -Parent $arqVersao) | Out-Null
+            Set-Content -Path $arqVersao -Value $remota
+            Write-Host '[OK] Programa atualizado.' -ForegroundColor Green
+        } else {
+            Write-Host '[AVISO] Nao consegui atualizar agora. Seguindo com a versao atual.' -ForegroundColor Yellow
+        }
+    }
+} catch {
+    Write-Host '[AVISO] Nao consegui verificar atualizacoes (sem internet?). Seguindo com a versao atual.' -ForegroundColor Yellow
+}
+Write-Host ''
+
 # 2) Chrome aberto com a extensao conectada (servidor local na porta 12306)
 function Test-ChromeConectado {
     try {

@@ -1,4 +1,8 @@
 {
+  "maximoPorRodada": 10,
   "publicarNaoResidencialComo": "Apartamento",
-  "_ajuda": "Tipos que o formulário do Facebook não tem (Lote, Terra, Fazenda, Galpão, Prédio, Comercial, Chácara...) são publicados como este tipo. Deixe null para voltar a pular esses anúncios. A descrição desses anúncios recebe o título do site no início para o comprador saber o que é."
+  "_ajuda": {
+    "maximoPorRodada": "Quantas ações no Marketplace (publicar, renovar, remover) por rodada. 10 é o valor seguro para a conta. Para dar vazão, prefira rodar o atalho em mais dias da semana a subir este número; acima de 15 o risco de sinalização cresce bastante.",
+    "publicarNaoResidencialComo": "Tipos que o formulário do Facebook não tem (Lote, Terra, Fazenda, Galpão, Prédio, Comercial, Chácara...) são publicados como este tipo. Deixe null para voltar a pular esses anúncios. A descrição desses anúncios recebe o título do site no início para o comprador saber o que é."
+  }
 }

@@ -123,11 +123,12 @@ async function montarLote() {
   }
 
   const tudo = [...remocoes, ...renovacoes, ...novos];
-  const lote = tudo.slice(0, LIMITE_LOTE);
+  const limite = Number(cfg.maximoPorRodada) > 0 ? Number(cfg.maximoPorRodada) : LIMITE_LOTE;
+  const lote = tudo.slice(0, limite);
   const sobraram = tudo.length - lote.length;
   const semLink = Object.entries(pub).filter(([, e]) => e.status === 'ativo' && !e.linkMarketplace).map(([id]) => '#' + id);
 
-  console.log(`LOTE DA SEMANA (${lote.length} de no máximo ${LIMITE_LOTE})`);
+  console.log(`LOTE DA RODADA (${lote.length} de no máximo ${limite}${limite !== LIMITE_LOTE ? ', definido em estado/config.json' : ''})`);
   if (!lote.length) console.log('  Nada a fazer nesta rodada.');
   lote.forEach((item, i) => {
     const extra = item.acao === 'renovar' ? `${item.dias} dias` : item.acao === 'publicar' ? (item.forcado ? `${item.tipoFormulario}* — tipo real: ${item.tipoReal}` : item.tipoFormulario) : '';
