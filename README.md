@@ -17,7 +17,7 @@ Guia do usuário final: [LEIA-ME.md](LEIA-ME.md). Regras de operação da sessã
 | `.claude/skills/atualizar-catalogo` | Só coleta + resumo de mudanças |
 | `.claude/skills/configurar-grupos` | Liga/desliga grupos do Facebook onde publicar (escolha salva em `estado/grupos.json`, capturada na 1ª publicação) |
 | `.mcp.json` | chrome-mcp direto via HTTP (`http://127.0.0.1:12306/mcp`) |
-| `Republicar.ps1` | Launcher do atalho (preflight: node, claude, `/ping` do bridge) |
+| `Republicar.ps1` | Launcher do atalho (preflight: node, claude, `/ping` do bridge); abre o Claude com `--dangerously-skip-permissions` para o operador leigo não ver prompts em inglês. `permissions.deny` bloqueia `npm update/install -g`, `rm -rf`, `Remove-Item`, `git push` mesmo em bypass |
 | `Instalar.ps1` | Setup de 1ª vez na máquina do operador |
 | `estado/publicados.json` | Rastreio do que está no Marketplace (renovação a cada 7 dias) |
 

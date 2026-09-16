@@ -21,7 +21,7 @@
 
 ## Primeira rodada (com o técnico do lado)
 
-8. Dar 2 cliques no atalho **"Republicar Anuncios"** e aceitar as confirmações iniciais do Claude (confiança da pasta).
+8. Dar 2 cliques no atalho **"Republicar Anuncios"** e aceitar a confirmação de confiança da pasta (aparece uma vez). O atalho abre o Claude sem perguntas de permissão (`--dangerously-skip-permissions`; comandos perigosos como `npm update` estão bloqueados em `.claude/settings.json`).
 9. Deixar a rodada acontecer supervisionada: o assistente vai atualizar o catálogo, propor o lote, **perguntar os grupos (uma vez só)** e pedir **1 clique na sugestão de cidade** por anúncio novo — mostrar ao Ruy como responder.
 10. Conferir no Facebook (Marketplace → Seus classificados) que os anúncios entraram.
 

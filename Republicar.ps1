@@ -69,8 +69,9 @@ Write-Host 'Abrindo o assistente. Ele vai conferir o site e te guiar.' -Foregrou
 Write-Host 'IMPORTANTE: nao feche esta janela nem o Chrome durante o processo.' -ForegroundColor Yellow
 Write-Host ''
 
-# 3) Sessao do Claude ja com a rotina de republicacao
-& claude '/republicar'
+# 3) Sessao do Claude ja com a rotina de republicacao, sem perguntas de permissao
+#    (o operador e leigo; as confirmacoes que importam sao feitas em conversa, pelas regras do CLAUDE.md)
+& claude --dangerously-skip-permissions '/republicar'
 
 Write-Host ''
 Read-Host 'Rodada encerrada. Pressione ENTER para fechar'

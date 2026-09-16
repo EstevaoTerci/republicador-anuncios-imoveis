@@ -1,7 +1,7 @@
 {
   "enableAllProjectMcpServers": true,
   "permissions": {
-    "defaultMode": "acceptEdits",
+    "defaultMode": "bypassPermissions",
     "allow": [
       "mcp__chrome-mcp",
       "Bash(node:*)",
@@ -12,6 +12,15 @@
       "Bash(cp:*)",
       "Bash(mv:*)",
       "WebFetch(domain:marcosperesimoveis.com.br)"
+    ],
+    "deny": [
+      "Bash(npm update:*)",
+      "Bash(npm install -g:*)",
+      "Bash(npm i -g:*)",
+      "Bash(npm uninstall -g:*)",
+      "Bash(rm -rf:*)",
+      "Bash(Remove-Item:*)",
+      "Bash(git push:*)"
     ]
   },
   "hooks": {
@@ -27,5 +36,6 @@
         ]
       }
     ]
-  }
+  },
+  "skipDangerousModePermissionPrompt": true
 }
