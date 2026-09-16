@@ -69,7 +69,7 @@ Uma pessoa **leiga em tecnologia**. Regras de comunicação:
 - Fotos: `chrome_upload_file` com `filePath` **absoluto** (ex.: `c:\...\catalogo\fotos\9258\01-9266.jpeg`) e `multiple: true` quando o campo aceitar várias. Funciona mesmo com o `input[type=file]` escondido. Antes de montar os caminhos, liste a pasta `catalogo/fotos/<id>/` (as extensões variam). Respeite o limite de fotos que o formulário indicar, priorizando as primeiras (a `01-...` é a capa).
 - Confira o resultado do que fez com `chrome_screenshot` (`storeBase64: true` para você ver; salve o PNG de confirmação em `estado/logs/`).
 - Se não encontrar um elemento depois de ~3 tentativas, use `chrome_request_element_selection` para pedir que o próprio usuário clique nele.
-- Se as ferramentas do navegador sumirem no meio da sessão, o servidor local caiu: peça ao usuário para conferir se o Chrome está aberto e a extensão diz "Conectado", e tente de novo.
+- Se as ferramentas do navegador sumirem no meio da sessão, o servidor local caiu: peça ao usuário para conferir se o Chrome está aberto e a extensão diz "Conectado", e tente de novo. Se a resposta for `Invalid MCP request or session`, a extensão foi recarregada/atualizada com a sessão aberta e a conexão desta sessão ficou inválida: não adianta repetir; peça ao usuário para fechar a janela do assistente e abrir o atalho de novo (o `Republicar.ps1` já faz a atualização da extensão ANTES de abrir o assistente justamente por isso).
 
 ## Montando o anúncio no Marketplace — fluxo validado (01/07/2026)
 
