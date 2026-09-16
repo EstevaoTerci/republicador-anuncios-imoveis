@@ -48,21 +48,43 @@ try {
             New-Item -ItemType Directory -Force -Path (Split-Path -Parent $arqVersao) | Out-Null
             Set-Content -Path $arqVersao -Value $remota
             Write-Host '[OK] Programa atualizado.' -ForegroundColor Green
-            $marcaExt = Join-Path $raiz 'estado\extensao-atualizada.txt'
-            if (Test-Path $marcaExt) {
-                Write-Host ''
-                Write-Host 'A extensao do Chrome foi atualizada. Para ela valer, o Chrome precisa ser reaberto:' -ForegroundColor Yellow
-                Write-Host '  1. Feche TODAS as janelas do Google Chrome.' -ForegroundColor Yellow
-                Write-Host '  2. Abra o Chrome de novo e entre no Facebook, se pedir.' -ForegroundColor Yellow
-                Read-Host '  3. Depois disso, volte aqui e pressione ENTER para continuar'
-                Remove-Item $marcaExt -Force
-            }
         } else {
             Write-Host '[AVISO] Nao consegui atualizar agora. Seguindo com a versao atual.' -ForegroundColor Yellow
         }
     }
 } catch {
     Write-Host '[AVISO] Nao consegui verificar atualizacoes (sem internet?). Seguindo com a versao atual.' -ForegroundColor Yellow
+}
+Write-Host ''
+
+# 1c) Extensao do Chrome: a copia que o Chrome carrega (%LOCALAPPDATA%\chrome-mcp-server) tem que ser
+#     igual a do pacote (instalador\extensao). Roda em TODA abertura, independente da versao, para
+#     cobrir o caso em que a atualizacao foi feita por um atualizador antigo.
+try {
+    $extInstalada = Join-Path $env:LOCALAPPDATA 'chrome-mcp-server'
+    $extPacote = Join-Path $raiz 'instalador\extensao'
+    $marcaExt = Join-Path $raiz 'estado\extensao-atualizada.txt'
+    $precisaReabrir = Test-Path $marcaExt
+    if ((Test-Path (Join-Path $extInstalada 'manifest.json')) -and (Test-Path (Join-Path $extPacote 'background.js'))) {
+        $hNovo = (Get-FileHash (Join-Path $extPacote 'background.js') -Algorithm SHA256).Hash
+        $arqAntigo = Join-Path $extInstalada 'background.js'
+        $hAntigo = if (Test-Path $arqAntigo) { (Get-FileHash $arqAntigo -Algorithm SHA256).Hash } else { '' }
+        if ($hNovo -ne $hAntigo) {
+            Write-Host 'A extensao do Chrome precisa ser atualizada. Copiando...' -ForegroundColor Yellow
+            Copy-Item -Path (Join-Path $extPacote '*') -Destination $extInstalada -Recurse -Force
+            $precisaReabrir = $true
+        }
+    }
+    if ($precisaReabrir) {
+        Write-Host ''
+        Write-Host 'A extensao do Chrome foi atualizada. Para ela valer, o Chrome precisa ser reaberto:' -ForegroundColor Yellow
+        Write-Host '  1. Feche TODAS as janelas do Google Chrome.' -ForegroundColor Yellow
+        Write-Host '  2. Abra o Chrome de novo e entre no Facebook, se pedir.' -ForegroundColor Yellow
+        Read-Host '  3. Depois disso, volte aqui e pressione ENTER para continuar'
+        if (Test-Path $marcaExt) { Remove-Item $marcaExt -Force }
+    }
+} catch {
+    Write-Host "[AVISO] Nao consegui conferir a extensao do Chrome: $_" -ForegroundColor Yellow
 }
 Write-Host ''
 
